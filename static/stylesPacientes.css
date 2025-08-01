@@ -1,0 +1,121 @@
+
+    .header {
+      background-color: #ffffff;
+      padding: 1rem;
+    }
+
+    .nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+
+    .logo {
+     display: flex;
+     align-items: center;
+    }
+
+   .logo-img {
+     width: 61px;
+     height: 77px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e4f1df;
+      margin: 0;
+      padding: 20px;
+    }
+    .search-form {
+     display: flex;
+     align-items: center;
+     margin-left: auto;
+    }
+
+    .search-input {
+     padding: 0.5rem;
+     border: 1px solid #f7f5f5;
+     border-radius: 20px;
+     border: 2px solid #ccc;
+     outline: none;
+    }
+
+    .search-button {
+     background: none;
+     border: none;
+     border-radius: 20px;
+     padding: 6px 10px;
+     cursor: pointer;       
+    }
+
+    .search-icon {
+     width: 20px;
+     height: 20px;
+    }
+
+    .user-icon {
+     width: 58px;
+     height: 58px;
+    }
+
+    .pacientes-container {
+      background-color: #9cb491;
+      border-radius: 30px;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .pacientes-container h2 {
+      margin: 0 0 20px 0;
+      font-size: 22px;
+    }
+
+    .paciente {
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .foto-nombre {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .foto-paciente {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nombre {
+      font-size: 16px;
+    }
+
+    .botones {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .boton {
+      background-color: #5f855a;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #80a576;
+    }

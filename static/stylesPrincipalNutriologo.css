@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Header styles */
+.header {
+  background-color: #f8f8f5;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 61px;
+  height: 77px;
+}
+
+.logo-text {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0 auto;
+  justify-content: center;
+  flex: 1;
+
+}
+
+.nav-link {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+.nav-link:hover {
+  transform: translateY(-4px); /* 👈 Se levanta */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 👈 Sombra para dar efecto de elevación */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-family: var(--text-md-normal-font-family);
+  font-size: var(--text-md-normal-font-size);
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.user-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.icono-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+
+body {
+  display: flex;
+  font-family: Helvetica;
+  height: 100vh;
+  overflow-y: auto;  /* ✅ Permite scroll vertical */
+  overflow-x: hidden;
+}
+.sidebar {
+  width: 240px;
+  height: 100vh; /* ✅ Hace que abarque todo el alto de la pantalla */
+  background-color: #709b6f;
+  color: rgb(7, 7, 8);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* ✅ Opcional: fija la barra lateral */
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+.sidebar a.active {
+  background-color: #709b6f;
+}
+
+.contenido {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  margin-left: 240px; /* Empuja el contenido para que no se solape con la sidebar */
+}
+
+.bienvenida {
+  background-color: #709b6f;
+  padding: 80px 100px; /* MÁS alto y más ancho internamente */
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  max-width: 200%;     /* Que use todo el ancho disponible */
+  width: 100%;         /* Que se expanda completamente */
+}
+
+
+.bienvenida h1 {
+  font-size: 90px;
+  font-family: 'Poppins-Regular", Helvetica;
+}
+
+.mensaje-final {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mensaje-final h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.mensaje-final p {
+  font-size: 24px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 10px auto;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+section:not(.bienvenida):not(.mensaje-final) {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 20px;
+}
+
+
+/* User menu styles */
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  min-width: 160px;
+  padding: 0;
+}
+
+.user-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.user-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>SMARTBITES - Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesGestionUsuAD.css') }}" />
+</head>
+<body>
+  <div class="principal">
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='img/HojaSin 2.png') }}" alt="logo sin fondo" class="logo-img" />
+          <h1 class="logo-text">SmartBites</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h1 class="title">Gestión de usuarios</h1>
+      <div class="columns">
+
+        <!-- Nutriólogos aprobados -->
+<div class="column">
+  <h2>Nutriólogos</h2>
+  <div class="card-list">
+    {% if nutriologos_aprobados %}
+      {% for nutriologo in nutriologos_aprobados %}
+      <div class="approval-card">
+        <div class="icon"></div>
+        <span>{{ nutriologo.nombre_completo }}</span>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No hay nutriólogos aprobados.</p>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Nutriólogos pendientes -->
+<div class="column">
+  <h2>Aprobar/rechazar perfiles</h2>
+  <div class="card-list">
+    {% if nutriologos_pendientes %}
+      {% for nutriologo in nutriologos_pendientes %}
+      <div class="approval-card">
+        <div class="icon"></div>
+        <span>{{ nutriologo.nombre_completo }}</span>
+        <form method="post" action="{{ url_for('aprobar_nutriologo', id=nutriologo.id_nutriologo) }}">
+          <button class="approve" type="submit">Aprobar</button>
+        </form>
+        <form method="post" action="{{ url_for('rechazar_nutriologo', id=nutriologo.id_nutriologo) }}">
+          <button class="reject" type="submit">Rechazar</button>
+        </form>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No hay solicitudes pendientes.</p>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Usuarios -->
+<div class="column">
+  <h2>Usuarios</h2>
+  <div class="card-list">
+    {% if usuarios %}
+      {% for usuario in usuarios %}
+      <div class="user-card">
+        <div class="icon"></div>
+        <span>{{ usuario.nombre_completo }}</span>
+        <form method="post" action="{{ url_for('eliminar_usuario', id=usuario.id_usuario) }}">
+          <button class="delete-btn" type="submit">Eliminar cuenta</button>
+        </form>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No hay usuarios registrados.</p>
+    {% endif %}
+  </div>
+</div>
+
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

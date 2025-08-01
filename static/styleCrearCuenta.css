@@ -1,0 +1,108 @@
+body {
+  background: url('../static/img/verde.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Capa oscura encima del fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* 40% de opacidad negra */
+  z-index: -1;
+}
+
+.registro-form {
+  max-width: 500px;
+  margin: 4rem auto;
+  background-color: #f8f8f5;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registro-form h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.tab-selector {
+  display: flex;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.tab-selector button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.tab-selector .active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.tab-selector button:hover {
+  background-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #424242;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #43a047;
+}

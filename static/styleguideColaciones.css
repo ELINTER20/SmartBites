@@ -1,0 +1,12 @@
+:root {
+  --gray-500: rgba(102, 112, 133, 1);
+  --gray-300: rgba(208, 213, 221, 1);
+  --text-md-normal-font-family: "Inter", Helvetica;
+  --text-md-normal-font-weight: 400;
+  --text-md-normal-font-size: 16px;
+  --text-md-normal-letter-spacing: 0px;
+  --text-md-normal-line-height: 24px;
+  --text-md-normal-font-style: normal;
+  --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --size-space-400: 16px;
+}

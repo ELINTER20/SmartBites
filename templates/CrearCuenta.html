@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro - SmartBites</title>
+  <link rel="stylesheet" href="../static/styleCrearCuenta.css" />
+
+</head>
+<body>
+  <main class="registro-form">
+    <h1>Crear cuenta en SmartBites</h1>
+    <div class="tab-selector">
+      <button type="button" id="btnUsuario" class="active" onclick="cambiarFormulario('usuario')">Usuario</button>
+      <button type="button" id="btnNutriologo" onclick="cambiarFormulario('nutriologo')">Nutriólogo</button>
+    </div>
+
+    <!-- Formulario Usuario -->
+    <form id="formUsuario" action="{{ url_for('registro_usuario') }}" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" name="nombre_completo" required />
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" name="correo_electronico" required />
+      </div>
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" name="contraseña" required />
+      </div>
+      <div class="form-group">
+        <label>Ciudad / País</label>
+        <input type="text" name="ciudad_pais" required />
+      </div>
+      <div class="form-group">
+        <label>Número de teléfono</label>
+        <input type="tel" name="numero_telefono" required />
+      </div>
+      <div class="form-group">
+        <label>Foto de perfil (opcional)</label>
+        <input type="file" name="foto_perfil" accept="image/*" />
+      </div>
+      <button type="submit">Registrarse como Usuario</button>
+    </form>
+
+    <!-- Formulario Nutriólogo -->
+    <form id="formNutriologo" class="hidden" action="{{ url_for('registro_nutriologo') }}" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" name="nombre_completo" required />
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" name="correo_electronico" required />
+      </div>
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" name="contraseña" required />
+      </div>
+      <div class="form-group">
+        <label>Cédula profesional</label>
+        <input type="text" name="cedula_profesional" required />
+      </div>
+      <div class="form-group">
+        <label>Especialidad</label>
+        <input type="text" name="especialidad" />
+      </div>
+      <div class="form-group">
+        <label>Formación académica</label>
+        <input type="text" name="formacion" />
+      </div>
+      <div class="form-group">
+        <label>Experiencia laboral</label>
+        <textarea name="experiencia" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Modalidad de atención</label>
+        <select name="modalidad_atencion">
+          <option value="presencial">Presencial</option>
+          <option value="en línea">En línea</option>
+          <option value="ambas">Ambas</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Costo de la consulta (MXN)</label>
+        <input type="number" name="costo_cita" />
+      </div>
+      <div class="form-group">
+        <label>Ciudad / País</label>
+        <input type="text" name="ciudad_pais" required />
+      </div>
+      <div class="form-group">
+        <label>Número de teléfono</label>
+        <input type="tel" name="numero_telefono" required />
+      </div>
+      <div class="form-group">
+        <label>Foto de perfil (opcional)</label>
+        <input type="file" name="foto_perfil" accept="image/*" />
+      </div>
+      <button type="submit">Registrarse como Nutriólogo</button>
+    </form>
+  </main>
+
+  <script>
+    function cambiarFormulario(tipo) {
+      const btnUsuario = document.getElementById("btnUsuario");
+      const btnNutriologo = document.getElementById("btnNutriologo");
+      const formUsuario = document.getElementById("formUsuario");
+      const formNutriologo = document.getElementById("formNutriologo");
+
+      if (tipo === "usuario") {
+        btnUsuario.classList.add("active");
+        btnNutriologo.classList.remove("active");
+        formUsuario.classList.remove("hidden");
+        formNutriologo.classList.add("hidden");
+      } else {
+        btnNutriologo.classList.add("active");
+        btnUsuario.classList.remove("active");
+        formNutriologo.classList.remove("hidden");
+        formUsuario.classList.add("hidden");
+      }
+    }
+  </script>
+</body>
+</html>

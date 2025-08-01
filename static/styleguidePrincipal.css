@@ -1,0 +1,147 @@
+:root {
+  --gray-500: rgba(102, 112, 133, 1);
+  --gray-300: rgba(208, 213, 221, 1);
+  --text-md-normal-font-family: "Inter", Helvetica;
+  --text-md-normal-font-weight: 400;
+  --text-md-normal-font-size: 16px;
+  --text-md-normal-letter-spacing: 0px;
+  --text-md-normal-line-height: 24px;
+  --text-md-normal-font-style: normal;
+  --heading-font-family: "Inter", Helvetica;
+  --heading-font-weight: 600;
+  --heading-font-size: 24px;
+  --heading-letter-spacing: -0.48px;
+  --heading-line-height: 120.00000476837158%;
+  --heading-font-style: normal;
+  --subheading-font-family: "Poppins-SemiBold", Helvetica;
+  --subheading-font-weight: 400;
+  --subheading-font-size: 20px;
+  --subheading-letter-spacing: 0px;
+  --subheading-line-height: 120.00000476837158%;
+  --subheading-font-style: normal;
+  --body-base-font-family: "Inter", Helvetica;
+  --body-base-font-weight: 400;
+  --body-base-font-size: 16px;
+  --body-base-letter-spacing: 0px;
+  --body-base-line-height: 139.9999976158142%;
+  --body-base-font-style: normal;
+  --body-strong-font-family: "Inter", Helvetica;
+  --body-strong-font-weight: 600;
+  --body-strong-font-size: 16px;
+  --body-strong-letter-spacing: 0px;
+  --body-strong-line-height: 139.9999976158142%;
+  --body-strong-font-style: normal;
+  --single-line-body-base-font-family: "Inter", Helvetica;
+  --single-line-body-base-font-weight: 400;
+  --single-line-body-base-font-size: 16px;
+  --single-line-body-base-letter-spacing: 0px;
+  --single-line-body-base-line-height: 100%;
+  --single-line-body-base-font-style: normal;
+  --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --color-text-default-default: var(--color-primitives-gray-900);
+  --color-text-default-secondary: var(--color-primitives-gray-500);
+  --color-background-default-default: var(--color-primitives-white-1000);
+  --color-background-neutral-tertiary: var(--color-primitives-slate-200);
+  --color-border-neutral-secondary: var(--color-primitives-slate-600);
+  --color-text-neutral-default: var(--color-primitives-slate-900);
+  --color-text-brand-on-brand: var(--color-primitives-brand-100);
+  --color-background-brand-default: var(--color-primitives-brand-800);
+  --color-border-brand-default: var(--color-primitives-brand-800);
+  --color-background-brand-hover: var(--color-primitives-brand-900);
+  --color-background-neutral-tertiary-hover: var(--color-primitives-slate-300);
+  --color-border-default-default: var(--color-primitives-gray-300);
+  --size-space-400: 16px;
+  --size-space-200: 8px;
+  --size-space-300: 12px;
+  --size-space-600: 24px;
+  --size-space-1600: 64px;
+  --size-space-1200: 48px;
+  --size-radius-200: 8px;
+  --color-primitives-gray-900: rgba(30, 30, 30, 1);
+  --color-primitives-gray-500: rgba(117, 117, 117, 1);
+  --color-primitives-white-1000: rgba(255, 255, 255, 1);
+  --color-primitives-white-500: rgba(255, 255, 255, 0.7);
+  --color-primitives-slate-200: rgba(227, 227, 227, 1);
+  --color-primitives-slate-600: rgba(118, 118, 118, 1);
+  --color-primitives-slate-900: rgba(48, 48, 48, 1);
+  --color-primitives-slate-500: rgba(148, 148, 148, 1);
+  --color-primitives-brand-100: rgba(245, 245, 245, 1);
+  --color-primitives-brand-900: rgba(30, 30, 30, 1);
+  --color-primitives-brand-800: rgba(44, 44, 44, 1);
+  --color-primitives-brand-b-800: rgba(119, 0, 0, 1);
+  --color-primitives-slate-300: rgba(205, 205, 205, 1);
+  --color-primitives-gray-300: rgba(217, 217, 217, 1);
+  --color-primitives-brand-300: rgba(217, 217, 217, 1);
+  --color-primitives-slate-1000: rgba(36, 36, 36, 1);
+  --color-primitives-gray-600: rgba(68, 68, 68, 1);
+  --responsive-device-width: 1200px;
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-color-mode="SDS-light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-color-mode="SDS-light"] {
+  --color-text-default-default: var(--color-primitives-gray-900);
+  --color-text-default-secondary: var(--color-primitives-gray-500);
+  --color-background-default-default: var(--color-primitives-white-1000);
+  --color-background-neutral-tertiary: var(--color-primitives-slate-200);
+  --color-border-neutral-secondary: var(--color-primitives-slate-600);
+  --color-text-neutral-default: var(--color-primitives-slate-900);
+  --color-text-brand-on-brand: var(--color-primitives-brand-100);
+  --color-background-brand-default: var(--color-primitives-brand-800);
+  --color-border-brand-default: var(--color-primitives-brand-800);
+  --color-background-brand-hover: var(--color-primitives-brand-900);
+  --color-background-neutral-tertiary-hover: var(--color-primitives-slate-300);
+  --color-border-default-default: var(--color-primitives-gray-300);
+}
+
+[data-color-mode="SDS-dark"] {
+  --color-text-default-default: var(--color-primitives-white-1000);
+  --color-text-default-secondary: var(--color-primitives-white-500);
+  --color-background-default-default: var(--color-primitives-gray-900);
+  --color-background-neutral-tertiary: var(--color-primitives-slate-900);
+  --color-border-neutral-secondary: var(--color-primitives-slate-500);
+  --color-text-neutral-default: var(--color-primitives-slate-200);
+  --color-text-brand-on-brand: var(--color-primitives-brand-900);
+  --color-background-brand-default: var(--color-primitives-brand-100);
+  --color-border-brand-default: var(--color-primitives-brand-100);
+  --color-background-brand-hover: var(--color-primitives-brand-300);
+  --color-background-neutral-tertiary-hover: var(--color-primitives-slate-1000);
+  --color-border-default-default: var(--color-primitives-gray-600);
+}
+
+[data-color-mode="brand-b-light"] {
+  --color-text-default-default: var(--color-primitives-gray-900);
+  --color-text-default-secondary: var(--color-primitives-gray-500);
+  --color-background-default-default: var(--color-primitives-white-1000);
+  --color-background-neutral-tertiary: var(--color-primitives-slate-200);
+  --color-border-neutral-secondary: var(--color-primitives-slate-600);
+  --color-text-neutral-default: var(--color-primitives-slate-900);
+  --color-text-brand-on-brand: var(--color-primitives-brand-100);
+  --color-background-brand-default: var(--color-primitives-brand-b-800);
+  --color-border-brand-default: var(--color-primitives-brand-800);
+  --color-background-brand-hover: var(--color-primitives-brand-900);
+  --color-background-neutral-tertiary-hover: var(--color-primitives-slate-300);
+  --color-border-default-default: var(--color-primitives-gray-300);
+}
+
+[data-responsive-mode="desktop"] {
+  --responsive-device-width: 1200px;
+}
+
+[data-responsive-mode="mobile"] {
+  --responsive-device-width: 375px;
+}
+
+[data-responsive-mode="tablet"] {
+  --responsive-device-width: 768px;
+}

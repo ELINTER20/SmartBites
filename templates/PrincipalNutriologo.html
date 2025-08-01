@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartBites</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesPrincipalNutriologo.css') }}">
+</head>
+<body>
+
+  <!-- Sidebar izquierda -->
+ <aside class="sidebar">
+  <!-- Imagen de logo como enlace -->
+  <a href="{{ url_for('pagina_nutriologo') }}">
+    <img src="{{ url_for('static', filename='img/HojaSin.png') }}" alt="Logo" class="logo">
+  </a>
+  
+  <h2>SmartBites</h2>
+  
+  <a href="#" class="nav-link">Perfil</a>
+  <a href="{{ url_for('pacientes') }}" class="nav-link">Pacientes</a>
+  <a href="{{ url_for('panel_nutriologo') }}" class="nav-link">Calendario</a>
+  <a href="#" class="nav-link">Citas</a>
+</aside>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+
+    <!-- Header centrado -->
+    <header class="header">
+      <nav class="nav">
+        <form class="search-form" role="search">
+        </form>
+
+        <div class="user-menu">
+          <div id="userDropdown" class="user-dropdown" style="display: none;">
+            <a href="{{ url_for('perfil_usuario') }}">Mi cuenta</a>
+            <a href="{{ url_for('chat_usuario') }}">Chats</a>
+            <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+          </div>
+          <button class="user-icon-btn" onclick="toggleUserMenu()" aria-label="Perfil de usuario">
+            <img src="{{ url_for('static', filename='img/' + (usuario.foto_perfil if usuario and usuario.foto_perfil else 'iconousuario.png')) }}"
+                 alt="Foto de perfil" class="icono-perfil">
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenido">
+      <section id="inicio" class="bienvenida">
+        <h1>BIENVENIDO A SMARTBITES</h1>
+      </section>
+
+      <section class="mensaje-final">
+        <h2>¡Gracias por ser parte de SmartBites!</h2>
+        <p>
+          Nos alegra tenerte aquí. Desde este panel podrás gestionar tus pacientes, crear planes alimenticios personalizados, dar seguimiento a consultas y contribuir al bienestar de cada persona que confía en ti.
+        </p>
+        <p>
+          Gracias por ser parte de SmartBites, donde juntos impulsamos una vida más saludable.
+        </p>
+      </section>
+    </main>
+
+  </div> <!-- Fin main-content -->
+<script>
+ function toggleUserMenu() {
+  const dropdown = document.getElementById("userDropdown");
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+// Oculta el menú si se hace clic fuera
+document.addEventListener("click", function (e) {
+  if (!e.target.closest('.user-menu')) {
+    const menu = document.getElementById("userDropdown");
+    if (menu) menu.style.display = "none";
+  }
+});
+
+
+function toggleDropdown(event) {
+  event.preventDefault();
+  var content = document.getElementById("dropdownContent");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  var submenu = document.getElementById("submenuContent");
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+</script>
+</body>
+</html>

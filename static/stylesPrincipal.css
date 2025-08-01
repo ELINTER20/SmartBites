@@ -1,0 +1,802 @@
+/* Header styles */
+.header {
+  background-color: #f8f8f5;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 61px;
+  height: 77px;
+}
+
+.logo-text {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0 auto;
+  justify-content: center;
+  flex: 1;
+
+}
+
+.nav-link {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+.nav-link:hover {
+  transform: translateY(-4px); /* 👈 Se levanta */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 👈 Sombra para dar efecto de elevación */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-family: var(--text-md-normal-font-family);
+  font-size: var(--text-md-normal-font-size);
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.user-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.icono-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* Hero section styles */
+.hero {
+  background-color: #a8c9a2;
+  padding: 2rem;
+  text-align: center;
+  color: #f8f8f5;
+  width: 100%;
+  max-width: 95%; /* Cambia este valor al ancho máximo que desees */
+  margin: 0 auto;    /* Centra la sección horizontalmente */
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.hero-title {
+  font-family: "Playfair Display-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 64px;
+  letter-spacing: 0.32px;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-family: "Crimson Text-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.16px;
+  margin-bottom: 2rem;
+}
+
+.hero-image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-image-slider {
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.image-track {
+  display: flex;
+  gap: 15px;
+  animation: scroll-left 20s linear infinite;
+}
+
+.image-track.reverse {
+  animation: scroll-right 20s linear infinite;
+}
+
+.hero-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+
+/* Estilos generales del chatBot*/
+/* Botón de burbuja flotante */
+.chat-bubble-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #65bb74;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.chat-bubble-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor del chat */
+.chat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 450px;
+  background: #f0fdf3;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estado minimizado */
+.chat-container.minimized {
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Cabecera */
+.chat-header {
+  background: #b8e3b0;
+  color: #1d381f;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: 1px solid #b5d9b1;
+}
+
+/* Botón cerrar */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Cuerpo del chat */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Input del chat */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 8px;
+  background: #eafdea;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background: #4caf50;
+  border: none;
+  color: white;
+  margin-left: 8px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #45a049;
+}
+
+/* Mensajes */
+.message {
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 85%;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  color: #000;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #2e2e2e;
+  border-bottom-left-radius: 4px;
+}
+
+/* Scroll */
+.chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+
+
+/* Features section styles */
+.features {
+  padding: 2rem;
+}
+
+.features-title {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.features-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.features-image {
+  width: 50%;
+  height: auto;
+}
+
+.features-text {
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.features-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.features-text li {
+  margin-bottom: 1rem;
+}
+
+/* Testimonial section styles */
+.testimonial {
+  background-color: #a8c9a2;
+  padding: 2rem;
+}
+
+.testimonial-quote {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #e6e6e6;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Diseases section styles */
+.diseases {
+  padding: 2rem;
+}
+
+.diseases-title {
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: var(--heading-font-weight);
+  font-size: 24px;
+  color: var(--color-text-default-default);
+  margin-bottom: 1rem;
+ 
+}
+
+.diseases-subtitle {
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: var(--subheading-font-weight);
+  font-size: 18px;
+  color: var(--color-text-default-secondary);
+  margin-bottom: 2rem;
+ 
+}
+
+.diseases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.disease-card {
+  background-color: #a8c9a2;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.disease-icon{
+  width: 230px;
+  height: 300px;
+  margin-bottom: 1rem;
+}
+
+.disease-title {
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: var(--body-strong-font-weight);
+  font-size: 20px;
+  color: var(--color-text-default-default);
+  margin-bottom: 0.5rem;
+}
+
+.disease-description {
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: absolute;
+  font-size: 16px;
+  color: var(--color-text-default-secondary);
+}
+
+.read-more {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #f8f8f5;
+  padding: 2rem;
+  border-top: 1px solid #e6e6e6;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-title {
+  font-family: var(--body-strong-font-family);
+  font-weight: var(--body-strong-font-weight);
+  font-size: var(--body-strong-font-size);
+  color: var(--color-text-default-default);
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  font-family: var(--body-base-font-family);
+  font-weight: var(--body-base-font-weight);
+  font-size: var(--body-base-font-size);
+  color: var(--color-text-default-default);
+  text-decoration: none;
+}
+
+
+
+.footer-logo {
+  width: 109px;
+  height: 90px;
+  margin-top: 2rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.main-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* BOTON DE BLOG */
+.dropdown-content {
+  font-family: "Poppins-Light", Helvetica;
+  display: none;            /* oculto por defecto */
+  flex-direction: column;   /* los botones se apilan verticalmente */
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background: white;
+}
+.dropdown-content a,
+.dropdown-content a:visited,
+.dropdown-content button:visited {
+  color: #000000;
+  text-decoration: none;
+}
+.dropdown-content a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.dropdown-content button {
+  display: block;
+  width: 100%; /* ocupa todo el ancho del contenedor */
+  padding: 10px;
+  margin-bottom: 6px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  text-align: left;
+  box-sizing: border-box; /* asegura que padding no empuje el ancho */
+}
+
+.dropdown-content a:hover {
+  background-color: #e0e0e0;
+  color: #000000; /* Cambia el color del texto al pasar el mouse */
+}
+
+.submenu-content {
+  position: absolute;
+  left: 100%;      /* Despliega a la derecha */
+  top: 0;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  min-width: 120px;
+  display: none;
+  flex-direction: column;
+}
+
+.submenu-content a {
+  padding: 8px 14px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu-content a:hover {
+  background: #e0e0e0;
+}
+/* Animaciones */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Comentarios section styles */
+/* Estilo general para la sección de comentarios */
+#seccion-comentarios {
+  font-family: "Arial", sans-serif;
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#seccion-comentarios h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor del formulario */
+#formulario-comentario {
+  display: flex;
+  align-items: center;
+  background-color: #bfe0b7; /* Verde claro pastel */
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Área de texto para el comentario */
+#nuevo-comentario {
+  flex-grow: 1;
+  border: none;
+  resize: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: #000000;
+  outline: none;
+  font-style: italic;
+}
+
+/* Botón de enviar (flecha) */
+#formulario-comentario button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s;
+}
+
+#formulario-comentario button:hover {
+  transform: translateX(3px);
+}
+
+/* Contenedor para comentarios existentes */
+#comentarios-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid #d6e9d2; /* Tono verde claro */
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f9fdf7; /* Fondo ligeramente verdoso */
+}
+
+/* Estilo individual de un comentario */
+.comentario {
+  display: flex;
+  flex-direction: column; /* ← clave para apilar verticalmente */
+  padding: 1.5rem;
+  border: 1px solid #d6e9d2;
+  border-radius: 1.25rem;
+  background-color: #f9fdf7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  line-height: 1.5rem;
+}
+
+/* Imagen de usuario genérica */
+.comentario .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Detalles del comentario */
+.comentario .contenido {
+  flex-grow: 1;
+}
+
+/* Nombre del usuario */
+.comentario .nombre {
+  color: #3b8532;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Fecha */
+.comentario.fecha {
+  font-size: 0.85rem;
+  color: #ff0202;
+}
+
+/* Texto del comentario */
+.comentario .texto {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  line-height: 1.5;
+}
+
+/* Acciones de comentario */
+.comentario .acciones {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.comentario .acciones button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.comentario .acciones button:hover {
+  opacity: 0.7;
+}
+
+.text-wrapper-8 {
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 1rem;
+
+  /* 🟦 Estilos de caja */
+  display: block;              /* Asegura que ocupe una línea completa */
+  background-color: #f5f5f5;   /* Fondo claro */
+  padding: 1rem;               /* Espaciado interno */
+  border: 1px solid #ddd;      /* Borde gris claro */
+  border-radius: 8px;          /* Bordes redondeados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+   max-width: 400px;
+  margin: 1rem auto;
+}
+/* User menu styles */
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  min-width: 160px;
+  padding: 0;
+}
+
+.user-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.user-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .search-form {
+    margin-top: 1rem;
+  }
+
+  .features-content {
+    flex-direction: column;
+  }
+
+  .features-image {
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .social-links {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SmartBites-Nutriologos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/globalNutriologos.css" />
+    <link rel="stylesheet" href="../static/styleguideNutriologos.css" />
+    <link rel="stylesheet" href="../static/stylesNutriologos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="NUTRIOLOGOS-perfil">
+      <div class="div">
+        <div class="overlap">  
+            <header class="header">
+                <nav class="nav">
+                <div class="logo">
+                    <img src="../static/img/HojaSin.png" alt="Logo SmartBites" class="logo-img" />
+                    <h1 class="logo-text">SmartBites</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('PrincipalRegistrada') }}" class="nav-link">INICIO</a></li>
+                    <li class="dropdown">
+                    <a href="#" class="nav-link" onclick="toggleDropdown(event)">BLOG</a>
+                    <div id="dropdownContent" class="dropdown-content" style="display: none;">
+                        <a href="#" onclick="toggleSubmenu(event)" style="position: relative;">RECETAS </a>
+                        <div id="submenuContent" class="submenu-content" style="display: none;">
+                        <a href="{{ url_for('desayunos') }}">DESAYUNOS</a>
+                        <a href="{{ url_for('comidas') }}">COMIDAS</a>
+                        <a href="{{ url_for('cenas') }}">CENAS</a>
+                        <a href="{{ url_for('colaciones') }}">COLACIONES</a>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                    </li>
+                    <li><a href="{{ url_for('nutriologos') }}" class="nav-link">NUTRIOLOGOS</a></li>
+                </ul>
+                <form class="search-form" role="search">
+                    <img src="../static/img/iconobuscar.png" alt="Buscar" class="search-icon" />
+                    <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="search-button" type="submit">
+                    </button>
+                </form>
+                <div class="user-menu">
+                  <div id="userDropdown" class="user-dropdown" style="display: none;">
+              
+                    <a href="{{ url_for('perfil_usuario') }}">Mi cuenta</a>
+                    <a href="{{ url_for('chat_usuario') }}">Chats</a>
+                    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+                  
+                    </div>
+                    <button class="user-icon-btn" onclick="toggleUserMenu()" aria-label="Perfil de usuario">
+                        <img src="{{ url_for('static', filename='img/' + (usuario.foto_perfil if usuario and usuario.foto_perfil else 'iconousuario.png')) }}" 
+                            alt="Foto de perfil" class="icono-perfil">
+                    </button>
+                  
+                </div>
+                </nav>
+            </header>
+          <!-- Tarjeta de ejemplo -->
+          <div class="container my-5">
+            {% for nutri in nutriologos %}
+            <div class="row mb-5 align-items-start">
+              <!-- Tarjeta del nutriólogo -->
+              <div class="col-md-5">
+                <div class="nutritionist-card p-3 shadow rounded bg-white">
+                  <img src="{{ url_for('static', filename='img/' + (nutri.foto_perfil if nutri.foto_perfil else 'iconousuario.png')) }}"
+                      alt="Foto" class="nutritionist-photo img-fluid rounded mb-3" />
+                  <h4>{{ nutri.nombre_completo }}</h4>
+                  <p class="specialty">{{ nutri.especialidad }}</p>
+                  <p class="description">Costo de cita: {{ nutri.costo_cita }} MXN</p>
+
+                  <div class="card-actions d-flex gap-2">
+                    <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalNutriologo{{ nutri.id_nutriologo }}">Ver perfil</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Calendario -->
+              <div class="col-md-7">
+                <div id="calendar{{ nutri.id_nutriologo }}" class="calendar-container border rounded p-2"></div>
+              </div>
+            </div>
+
+            <!-- Modal del perfil -->
+            <div class="modal fade" id="modalNutriologo{{ nutri.id_nutriologo }}" tabindex="-1" aria-labelledby="modalNutriologoLabel{{ nutri.id_nutriologo }}" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content" style="padding: 20px;">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalNutriologoLabel{{ nutri.id_nutriologo }}">Perfil de {{ nutri.nombre_completo }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p><strong>Modalidad:</strong> {{ nutri.modalidad_atencion }}</p>
+                    <p><strong>Cédula profesional:</strong> {{ nutri.cedula_profesional }}</p>
+                    <p><strong>Formación:</strong> {{ nutri.formacion }}</p>
+                    <p><strong>Experiencia:</strong><br>{{ nutri.experiencia | safe }}</p>
+                    <p><strong>Ubicación:</strong> {{ nutri.ciudad_pais }}</p>
+                    <p><strong>Teléfono:</strong> {{ nutri.numero_telefono }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+
+    </div>
+     <footer class="footer">
+        <div class="footer-content">
+          <nav class="footer-nav">  
+          <div class="footer-column">
+              <h4 class="footer-title">SmartBites</h4>
+              <ul>
+                <li><a href="{{ url_for('home') }}">About us</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+          </nav>
+          <div class="footer-info">
+            <p class="footer-text">© 2025 SmartBites. Todos los derechos reservados.</p>
+          </div>
+    </div>
+   
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+    <script>
+        function toggleDropdown(event) {
+      event.preventDefault();
+      var content = document.getElementById("dropdownContent");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      var submenu = document.getElementById("submenuContent");
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+
+    // Cierra los menús si se hace clic fuera
+    document.addEventListener("click", function(e) {
+      const dropdown = document.getElementById("dropdownContent");
+      const submenu = document.getElementById("submenuContent");
+      // Si el clic NO fue dentro de .dropdown ni .submenu-content
+      if (!e.target.closest('.dropdown')) {
+        if (dropdown) dropdown.style.display = "none";
+        if (submenu) submenu.style.display = "none";
+      }
+    });
+    </script>
+    <script>
+    function abrirModal() {
+      document.getElementById("modalNutriologo").style.display = "block";
+    }
+
+    function cerrarModal() {
+      document.getElementById("modalNutriologo").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("modalNutriologo");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+    </script>
+    <script>
+    function toggleUserMenu() {
+      const dropdown = document.getElementById("userDropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Oculta el menú si se hace clic fuera
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest('.user-menu')) {
+        const menu = document.getElementById("userDropdown");
+        if (menu) menu.style.display = "none";
+      }
+    });
+    </script>
+
+
+   <script >
+          window.nutriologosData = {{ nutriologos | tojson | safe}};
+        </script>
+        <script src="{{ url_for('static', filename='js/calendarios.js') }}"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        {% for nutri in nutriologos %}
+          const calendarEl = document.getElementById('calendar{{ nutri.id_nutriologo }}');
+          if (calendarEl) {
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+              initialView: 'dayGridMonth',
+              locale: 'es',
+              height: 400,
+              headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek'
+              },
+              selectable: true,
+              dateClick: function(info) {
+                alert('Has seleccionado el día: ' + info.dateStr + ' con {{ nutri.nombre_completo | tojson }}');
+              }
+            });
+            calendar.render();
+          }
+        {% endfor %}
+      });
+    </script>
+
+  </body>
+</html>

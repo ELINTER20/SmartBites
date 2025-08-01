@@ -1,0 +1,370 @@
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>SmartBites - Asesoría nutricional con ciencia y corazón</title>
+    <link rel="stylesheet" href="../static/img/styleguidePrincipal.css" />
+    <link rel="stylesheet" href="../static/globalPrincipal.css" />
+    <link rel="stylesheet" href="../static/stylesPrincipal.css" />
+    
+  </head>
+ 
+  <body data color-mode="SDS-light">
+    <div class="principal">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo">
+            <img src="../static/img/HojaSin.png" alt="Logo SmartBites" class="logo-img" />
+            <h1 class="logo-text">SmartBites</h1>
+          </div>
+         <ul class="nav-links">
+            <li><a href="{{ url_for('PrincipalRegistrada') }}" class="nav-link">INICIO</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link" onclick="toggleDropdown(event)">BLOG</a>
+              <div id="dropdownContent" class="dropdown-content" style="display: none;">
+                <a href="#" onclick="toggleSubmenu(event)" style="position: relative;">RECETAS </a>
+                <div id="submenuContent" class="submenu-content" style="display: none;">
+                  <a href="{{ url_for('desayunos') }}">DESAYUNOS</a>
+                  <a href="{{ url_for('comidas') }}">COMIDAS</a>
+                  <a href="{{ url_for('cenas') }}">CENAS</a>
+                  <a href="{{ url_for('colaciones') }}">COLACIONES</a>
+                </div>
+                <a href="#"></a>
+              </div>
+            </li>
+            <li><a href="{{ url_for('nutriologos') }}" class="nav-link">NUTRIOLOGOS</a></li>
+          </ul>
+          <form class="search-form" role="search">
+            <img src="../static/img/iconobuscar.png" alt="Buscar" class="search-icon" />
+            <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            <button class="search-button" type="submit">
+            </button>
+          </form>
+          <div class="user-menu">
+              <div id="userDropdown" class="user-dropdown" style="display: none;">
+          
+                <a href="{{ url_for('perfil_usuario') }}">Mi cuenta</a>
+                 <a href="{{ url_for('chat_usuario') }}">Chats</a>
+                <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+              
+            </div>
+            <button class="user-icon-btn" onclick="toggleUserMenu()" aria-label="Perfil de usuario">
+                <img src="{{ url_for('static', filename='img/' + (usuario.foto_perfil if usuario and usuario.foto_perfil else 'iconousuario.png')) }}" 
+                    alt="Foto de perfil" class="icono-perfil">
+            </button>
+           
+          </div>
+
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <h2 class="hero-title">Asesoría nutricional con ciencia y corazón.</h2>
+         
+          <p class="hero-subtitle">Explora un camino más saludable, hecho a tu medida.</p>
+          
+          
+          <div class="hero-image-slider top">
+            <div class="image-track">
+              <img src="../static/img/comida1.jpg" alt="Plato saludable" class="hero-image" />
+              <img src="../static/img/comida2.jpg" alt="Frutas frescas" class="hero-image" />
+              <img src="../static/img/comida3.jpg" alt="Ensalada colorida" class="hero-image" />
+              <img src="../static/img/comida4.png" alt="Smoothie verde" class="hero-image" />
+              <img src="../static/img/comida5.png" alt="Plato balanceado" class="hero-image" />
+
+              <img src="../static/img/comida1.jpg" alt="Plato saludable" class="hero-image" />
+              <img src="../static/img/comida2.jpg" alt="Frutas frescas" class="hero-image" />
+              <img src="../static/img/comida3.jpg" alt="Ensalada colorida" class="hero-image" />
+              <img src="../static/img/comida4.png" alt="Smoothie verde" class="hero-image" />
+              <img src="../static/img/comida5.png" alt="Plato balanceado" class="hero-image" />
+
+              <img src="../static/img/comida1.jpg" alt="Plato saludable" class="hero-image" />
+              <img src="../static/img/comida2.jpg" alt="Frutas frescas" class="hero-image" />
+              <img src="../static/img/comida3.jpg" alt="Ensalada colorida" class="hero-image" />
+              <img src="../static/img/comida4.png" alt="Smoothie verde" class="hero-image" />
+              <img src="../static/img/comida5.png" alt="Plato balanceado" class="hero-image" />
+            </div>
+          </div>
+          <div class="hero-image-slider bottom">
+            <div class="image-track reverse">
+              <img src="../static/img/comida6.jpg" alt="Verduras frescas" class="hero-image" />
+              <img src="../static/img/comida7.jpg" alt="Desayuno saludable" class="hero-image" />
+              <img src="../static/img/comida8.jpg" alt="Snack nutritivo" class="hero-image" />
+              <img src="../static/img/comida9.jpg" alt="Plato vegetariano" class="hero-image" />
+              <img src="../static/img/comida10.jpg" alt="Batido de frutas" class="hero-image" />
+        
+              <img src="../static/img/comida6.jpg" alt="Verduras frescas" class="hero-image" />
+              <img src="../static/img/comida7.jpg" alt="Desayuno saludable" class="hero-image" />
+              <img src="../static/img/comida8.jpg" alt="Snack nutritivo" class="hero-image" />
+              <img src="../static/img/comida9.jpg" alt="Plato vegetariano" class="hero-image" />
+              <img src="../static/img/comida10.jpg" alt="Batido de frutas" class="hero-image" />
+
+               <img src="../static/img/comida6.jpg" alt="Verduras frescas" class="hero-image" />
+              <img src="../static/img/comida7.jpg" alt="Desayuno saludable" class="hero-image" />
+              <img src="../static/img/comida8.jpg" alt="Snack nutritivo" class="hero-image" />
+              <img src="../static/img/comida9.jpg" alt="Plato vegetariano" class="hero-image" />
+              <img src="../static/img/comida10.jpg" alt="Batido de frutas" class="hero-image" />
+            </div>
+          </div>
+
+
+          <button id="chatBubble" class="chat-bubble-btn">💬</button>
+          <div id="chatBot" class="chat-container minimized">
+          <div class="chat-header">
+            <span>🧑‍⚕️ Nutrióloga </span>
+            <small>IA-CHAT</small>
+            <button id="closeChat" class="close-btn">✕</button>
+          </div>
+
+          <div class="chat-body">
+          <div class="message bot">¡Hola! Soy un asistente virtual impulsado por IA, ¿En qué puedo ayudarte?</div>
+          </div>
+
+          <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Escribe un mensaje..." />
+          <button id="sendBtn">➤</button>
+          </div>
+          </div>
+        </section>
+        <section class="features">
+          <h2 class="features-title">¿Por qué SmartBites es la elección inteligente para tu bienestar?</h2>
+          <div class="features-content">
+            <img src="../static/img/comida11.png" alt="Plato saludable SmartBites" class="features-image" />
+            <div class="features-text">
+              <p>
+                En SmartBites hacemos que la nutrición sea accesible, práctica y basada en ciencia. Te ayudamos a
+                entender tu alimentación, tomar decisiones informadas y mejorar tu relación con la comida, sin juicios
+                ni restricciones.
+              </p>
+              <p>
+                Nuestro equipo de nutriólogos y desarrolladores combina tecnología (como nuestro chatbot con IA),
+                educación clara y acompañamiento profesional para ofrecerte:
+              </p>
+              <ul>
+                <li></li>
+                <li>- Recetas fáciles</li>
+                <li>- Contenido confiable</li>
+                <li>- Herramientas interactivas</li>
+                <li>- Atención personalizada</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="testimonial">
+          <blockquote class="testimonial-quote">
+            "Creemos en una nutrición con confianza, claridad y respaldo profesional. SmartBites no solo te dice qué
+            comer: te ayuda a entender por qué, cómo y para qué."
+          </blockquote>
+        </section>
+        <section class="diseases">
+          <h2 class="diseases-title">Enfermedades</h2>
+          <p class="diseases-subtitle">
+            Aquí presentamos una breve explicación sobre las enfermedades más comunes en la alimentación.
+          </p>
+          <div class="diseases-grid">
+            <article class="disease-card">
+              <img src="../static/img/Diabetes.jpg" alt="Icono de diabetes" class="disease-icon" />
+              <h3 class="disease-title">Diabetes</h3>
+              <p class="disease-description">
+                Es una enfermedad crónica caracterizada por la presencia de niveles elevados de azúcar o glucosa en la sangre.
+              </p>
+            </article>
+            <article class="disease-card">
+              <img src="../static/img/Obesi.jpg" alt="Icono de leucemia" class="disease-icon" />
+              <h3 class="disease-title">Obesidad</h3>
+              <p class="disease-description">
+                La obesidades una enfermedad de tipo crónico y que presenta diversos orígenes posibles, consistente en la acumulación excesiva de tejido graso en el cuerpo. 
+              </p>
+            </article>
+            <article class="disease-card">
+              <img src="../static/img/Anorexia.avif" alt="Icono de anemia" class="disease-icon" />
+              <h3 class="disease-title">Anorexia</h3>
+              <p class="disease-description">
+                Trastorno alimentario caracterizado por el miedo intenso a ganar peso y la distorsión de la imagen corporal, provocando signos y síntomas como delgadez excesiva, rechazo a comer,
+                desmayos y mareos, y práctica excesiva de actividad física, por ejemplo.
+              </p>
+            </article>
+            <article class="disease-card">
+              <img src="../static/img/Bulimia.jpg" alt="Icono de embarazo" class="disease-icon" />
+              <h3 class="disease-title">Bulimia</h3>
+              <p class="disease-description">
+                Trastorno alimentario en el que la o las personas afectadas padecen episodios regulares en los que ingieren una gran cantidad de comida —denominados atracones— 
+                en los que tiene una pérdida de control sobre la comida ingerida.
+              </p>
+            </article>
+            <article class="disease-card">
+              <img src="../static/img/Salmonelosis.jpg" alt="Icono genérico" class="disease-icon" />
+              <h3 class="disease-title">Salmonelosis</h3>
+              <p class="disease-description">
+                La infección por salmonela (salmonelosis) es una enfermedad bacteriana común que afecta el tubo intestinal. La bacteria de la salmonela generalmente vive en los 
+                intestinos de animales y humanos y se expulsa mediante las heces (materia fecal). 
+              </p>
+            </article>
+        
+          </div>
+          <a href="#" class="read-more">Read more→</a>
+        </section>
+       <section id="seccion-comentarios" class="comentarios">
+         <h2>Comentarios</h2>
+         <div id="comentarios-contenedor"></div>
+        <form id="formulario-comentario">
+          <textarea id="nuevo-comentario" required></textarea>
+          <button type="submit">Publicar</button>
+        </form>
+        
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <nav class="footer-nav">  
+          <div class="footer-column">
+              <h4 class="footer-title">SmartBites</h4>
+              <ul>
+                <li><a href="{{ url_for('home') }}">About us</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+          </nav>
+          <div class="footer-info">
+            <p class="footer-text">© 2025 SmartBites. Todos los derechos reservados.</p>
+          </div>
+<script>
+
+
+  // Chatbot functionality
+
+
+  const bubbleBtn = document.getElementById("chatBubble");
+  const chatBox = document.getElementById("chatBot");
+  const closeBtn = document.getElementById("closeChat");
+  const input = document.getElementById("chatInput");
+  const sendBtn = document.getElementById("sendBtn");
+  const chatBody = document.querySelector(".chat-body");
+
+  // Mostrar chat
+  bubbleBtn.addEventListener("click", () => {
+    chatBox.classList.remove("minimized");
+  });
+
+  // Cerrar chat
+  closeBtn.addEventListener("click", () => {
+    chatBox.classList.add("minimized");
+  });
+
+  // Enviar mensaje con botón
+  sendBtn.addEventListener("click", enviarMensaje);
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") enviarMensaje();
+  });
+
+  async function enviarMensaje() {
+    const mensaje = input.value.trim();
+    if (!mensaje) return;
+
+    mostrarMensaje("Tú", mensaje);
+    input.value = "";
+
+    try {
+      const res = await fetch("/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mensaje: mensaje })
+      });
+
+      const data = await res.json();
+      mostrarMensaje("SmartBites AI", data.respuesta);
+    } catch (error) {
+      console.error("Error en el chat:", error);
+      mostrarMensaje("SmartBites AI", "Ocurrió un error al responder.");
+    }
+  }
+
+  function mostrarMensaje(remitente, texto) {
+    const div = document.createElement("div");
+    div.className = remitente === "Tú" ? "message user" : "message bot";
+    div.innerHTML = `<strong>${remitente}:</strong> ${texto}`;
+    chatBody.appendChild(div);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+
+
+//Coment section
+   
+function toggleDropdown(event) {
+  event.preventDefault();
+  var content = document.getElementById("dropdownContent");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  var submenu = document.getElementById("submenuContent");
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("/api/comentarios")
+      .then(response => response.json())
+      .then(comentarios => {
+        const contenedor = document.getElementById("comentarios-contenedor");
+        comentarios.forEach(comentario => {
+          const div = document.createElement("div");
+          div.className = "comentario";
+          div.innerHTML = `
+            <strong>${comentario.nombre}</strong>
+            <p>${comentario.texto}</p>
+            <small>${new Date(comentario.fecha).toLocaleString()}</small>
+          `;
+          contenedor.appendChild(div);
+        });
+      });
+
+    document.getElementById("formulario-comentario").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const texto = document.getElementById("nuevo-comentario").value;
+      fetch("/api/comentarios", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ texto })
+      })
+        .then(response => response.json())
+        .then(comentario => {
+          const contenedor = document.getElementById("comentarios-contenedor");
+          const div = document.createElement("div");
+          div.className = "comentario";
+          div.innerHTML = `
+            <strong>${comentario.nombre}</strong>
+            <p>${comentario.texto}</p>
+            <small>${new Date(comentario.fecha).toLocaleString()}</small>
+          `;
+          contenedor.prepend(div);
+          document.getElementById("nuevo-comentario").value = ""; // limpiar input
+        });
+    });
+  });
+
+
+
+
+  //menu de perfil de usuario
+
+
+
+ function toggleUserMenu() {
+  const dropdown = document.getElementById("userDropdown");
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+// Oculta el menú si se hace clic fuera
+document.addEventListener("click", function (e) {
+  if (!e.target.closest('.user-menu')) {
+    const menu = document.getElementById("userDropdown");
+    if (menu) menu.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>
+  </body>
+</html>

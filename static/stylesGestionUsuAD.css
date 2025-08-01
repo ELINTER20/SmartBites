@@ -1,0 +1,157 @@
+    .nav {
+     margin: 0; 
+     padding: 0;
+     width: 100%; /* Ocupa todo el ancho de la pantalla */
+     height: 100px; /* Altura definida */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #4a9c5d; /* Color de fondo opcional */
+     padding: 0 30px; /* Espacio a los lados internos */
+     box-sizing: border-box; /* Incluye el padding dentro del 100% */
+    }
+
+    .logo {
+     display: flex;
+     align-items: center;
+    }
+
+   .logo-img {
+     width: 61px;
+     height: 77px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 20px;
+    }
+    .search-form {
+     display: flex;
+     align-items: center;
+     margin-left: auto;
+    }
+
+    .search-input {
+     padding: 0.5rem;
+     border: 1px solid #f7f5f5;
+     border-radius: 20px;
+     border: 2px solid #ccc;
+     outline: none;
+    }
+
+    .search-button {
+     background: none;
+     border: none;
+     border-radius: 20px;
+     padding: 6px 10px;
+     cursor: pointer;       
+    }
+
+    .search-icon {
+     width: 20px;
+     height: 20px;
+    }
+
+    .user-icon {
+     width: 58px;
+     height: 58px;
+    }
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.search-profile {
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.column {
+  background-color: #a4c49a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.column h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.underline {
+  text-decoration: underline;
+  color: #004f8c;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-card, .approval-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.approve {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.reject {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #ccc;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}

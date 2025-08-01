@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBites - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesLogin.css') }}">
+  </head>
+  <body>
+    
+    <main class="login-container">
+      <section class="login-overlay">
+        <div class="logo-text">
+          <h1>SmartBites</h1>
+        </div>
+        <h2 class="subtitulo-mision">Unidos por una misión...</h2>
+        <h3 class="texto-intro">Te ayudamos a mejorar paso a paso, aprende sobre tu alimentación con nosotros.</h3>
+      </section>
+      <section class="login-form">
+        <h2>BIENVENIDO</h2>
+        <h3>INICIA SESION</h3>
+          {% if error %}
+            <p style="color: red;">{{ error }}</p>
+          {% endif %}
+        <form id="loginForm" method="post" action="{{ url_for('login') }}">
+        
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="correo_electronico" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="contraseña" required />
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" name="remember" /> Recordarme </label>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit">CONTINUAR</button>
+        </form>
+        <div class="signup-links">
+          <p>¿Nuevo Usuario? <a href="{{ url_for('mostrar_registro') }}">Crea una cuenta</a></p>
+        </div>
+      </section>
+    </main>
+  </body>

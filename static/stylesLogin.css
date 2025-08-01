@@ -1,0 +1,361 @@
+@media (max-width: 768px) {
+        .login-container {
+          flex-direction: column;
+        }
+
+        .login-image {
+          height: 30vh;
+        }
+
+        .login-form {
+          max-width: 100%;
+        }
+      }
+body {
+font-family: "Poppins", sans-serif;
+background-image: url("img/verde.jpg");
+background-size: cover;       /* Hace que la imagen cubra toda el área */
+background-position: center;  /* Centra la imagen */
+background-repeat: no-repeat;
+min-height: 100vh;
+width: 100vw;
+margin: 0;
+padding: 0;
+}
+
+.login-page {
+  margin: 50px;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 16px;
+  line-height: 1.5;
+  Color: #6e0c0c;
+  background-color: #ffffff;
+}
+
+.login-container {
+display: flex;
+height: 100vh;
+align-items: center; /* centra verticalmente */
+gap: 16px; 
+}
+
+
+
+
+
+
+.login-overlay {
+position: absolute;
+top: 20px;     /* Mueve hacia abajo */
+left: 10px;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(46deg, rgba(33, 33, 33, 0.84) 0%, rgba(66, 66, 66, 0.24) 100%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 2rem;
+color: #f8f8f5;
+}
+
+.logo-text {
+  display: flex;
+  position: relative;
+  gap: 10px; 
+  margin-bottom: 15px;
+  font-family: "Poppins-Bold", Helvetica;
+  margin-top: -20px;
+  left: -218px !important;
+}
+
+.texto {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;              /* Los elementos se alinean en fila */
+  align-items: center;        /* Alinea verticalmente al centro */
+  gap: 0px;
+  margin-top: -100px; /* 🔽 Lo mueve hacia abajo */
+  margin-left: -25px; /* 🔼 Mueve hacia la derecha */  
+  color: #ffffff;
+}
+
+.login-form {
+  position: fixed;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);  /* centra absolutamente */
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 400px;
+  z-index: 3;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;           /* altura total de la ventana */
+  justify-content: flex-start;  /* contenido empieza desde arriba */
+  font-family: "Poppins-Bold", Helvetica;
+}
+
+h1 {
+margin: 0 0 10px;
+}
+
+
+h2 {
+margin: 0 0 0px;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 12px; /* 176.016% */
+}
+
+h3 {
+margin: 0 0 1px;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 44px; /* 176% */
+}
+
+.form-group {
+margin-bottom: 1rem;
+}
+
+label {
+display: block;
+margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+width: 95%;
+padding: 0.75rem;
+border: 1px solid #bdbdbd;
+border-radius: 8px;
+font-size: 1rem;
+}
+
+.remember-forgot {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1rem;
+}
+
+button {
+width: 100%;
+padding: 0.75rem;
+background-color: #212121;
+color: #ffffff;
+border: none;
+border-radius: 8px;
+font-size: 1rem;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Responsive Styles */
+
+
+.login-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}  
+
+.login-image {
+  position: fixed;  /* Fija en fondo */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("../img/Fondo.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(46deg, rgba(33,33,33,0.84) 0%, rgba(66,66,66,0.24) 100%);
+  color: #f8f8f5;
+  padding: 2rem 10rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+
+
+h2 {
+  display: flex;
+  position: relative;
+  gap: 10px; 
+  margin-bottom: 15px;
+  font-family: "Poppins-Bold", Helvetica;
+  margin-top: center;
+  left: -170px !important;
+  top: -100px;
+}
+
+.form-group {
+  position: relative;
+  top: 75px;           /* baja todo el contenido dentro */
+  margin-left: -27px;  /* si quieres mover a la izquierda */
+  margin-bottom: 20px;  /* reduce el espacio entre grupos para que no estén tan separados */
+  font-family: "Poppins-Bold", Helvetica;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 95px;
+  margin-left: -18px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #212121;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.social-login {
+  margin-top: 1rem;
+}
+
+.social-login button {
+  background-color: #fafafa;
+  color: #616161;
+  border: 1px solid #eeeeee;
+  margin-bottom: 0.5rem;
+ }
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #bdbdbd;
+  }
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.signup-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.signup-links a {
+  color: #212121;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.logo-text h1 {
+  color: white; 
+  margin: 0;
+  margin-top: 15px;
+  font-size: 60px;
+} 
+
+.subtitulo-mision {
+  font-size: 30px; 
+  color: white;    
+  margin-bottom: 10px; 
+  position: relative;
+  margin-left: -85px;
+  margin-top: 100px;
+}
+
+.login-overlay p {
+  font-size: 20px;
+}
+
+.login-form h2 {
+  position: absolute;    /* posicion absoluta dentro de login-form */
+  top: 35px;             /* ajustar arriba */
+  left: 20px !important;            /* ajustar a la izquierda */
+  font-size: 30px;
+  color: black;
+  margin: 0;             /* quitar margenes para evitar movimiento */
+  z-index: 5;     
+   font-family: "Poppins-Bold", Helvetica;
+  font-size: 14px;
+}
+
+.login-form h3 {
+  position: absolute;    /* posicion absoluta dentro de login-form */
+  top: 60px;             /* ajustar arriba */
+  left: 20px !important;            /* ajustar a la izquierda */
+  font-size: 30px;
+  color: black;
+  margin: 0;             /* quitar margenes para evitar movimiento */
+  z-index: 5;     
+   font-family: "Poppins-Bold", Helvetica;
+  font-size: 24px;
+}
+
+.texto-intro {
+  font-size: 18px; 
+  color: white;    
+  margin-bottom: 1px; 
+  position: center;
+  margin-left: -420px;
+  margin-top: -90px;
+}   

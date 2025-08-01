@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/globalDesayunos.css" />
+    <link rel="stylesheet" href="../static/styleguideDesayunos.css" />
+    <link rel="stylesheet" href="../static/stylesDesayunos.css" />
+  </head>
+  <body>
+    <div class="RECETAS-DESAYUNOS">
+      <div class="div">
+        <div class="overlap">
+          
+          <header class="header">
+            <nav class="nav">
+              <div class="logo">
+                <img src="../static/img/HojaSin.png" alt="Logo SmartBites" class="logo-img" />
+                <h1 class="logo-text">SmartBites</h1>
+              </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('PrincipalRegistrada') }}" class="nav-link">INICIO</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">BLOG</a>
+                  <div id="dropdownContent" class="dropdown-content" style="display: none;">
+                    <a href="#" onclick="toggleSubmenu(event)" style="position: relative;">RECETAS </a>
+                    <div id="submenuContent" class="submenu-content" style="display: none;">
+                      <a href="{{ url_for('desayunos') }}">DESAYUNOS</a>
+                      <a href="{{ url_for('comidas') }}">COMIDAS</a>
+                      <a href="{{ url_for('cenas') }}">CENAS</a>
+                      <a href="{{ url_for('colaciones') }}">COLACIONES</a>
+                    </div>
+                    <a href="#"></a>
+                  </div>
+                </li>
+                <li><a href="#" class="nav-link">NUTRIOLOGOS</a></li>
+              </ul>
+              <form class="search-form" role="search">
+                <img src="../static/img/iconobuscar.png" alt="Buscar" class="search-icon" />
+                <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+                <button class="search-button" type="submit">
+                </button>
+              </form>
+              <a href="{{ url_for('login') }}" class="user-icon" aria-label="Perfil de usuario">
+                <img src="../static/img/iconousuario.png" alt="Icono de usuario" class="icon-user" />
+              </a>
+            </nav>
+          </header>
+            
+          </div>
+          <div class="text-wrapper-6">DESAYUNOS</div>
+            
+        </p>
+        </div>
+        <div class="overlap-2">
+          <div class="BOTON-CATEGORIA">
+            <div class="div-wrapper"><div class="text-wrapper-7">CATEGORIAS</div></div>
+            
+          </div>
+          <div class="frame">
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group-2">
+                <p class="p">DESAYUNOS DE 100 A 200 kcal.</p>
+                <img class="line" src="img/line-1-3.svg" />
+              </div>
+            </div>
+            <div class="frame-2">
+              <div class="div-2">
+                <div class="overlap-wrapper">
+                  <div class="div-2">
+                    <div class="group-3">
+                      <div class="overlap-3">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-8">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-9">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-10">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-11">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-12">1 Huevo</div>
+                            <p class="text-wrapper-13">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-14">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="line-2" src="img/line-4-9.svg" />
+                      </div>
+                    </div>
+                    <img class="line-3" src="img/line-2-11.svg" />
+                    <img class="line-4" src="img/line-6-4.svg" />
+                    <img class="line-5" src="img/line-3-3.svg" />
+                    <img class="line-6" src="img/line-5-5.svg" />
+                    <div class="text-wrapper-15">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-3"></div>
+                    <div class="rectangle-4"></div>
+                    <div class="text-wrapper-16">INGREDIENTES</div>
+                    <img class="line-7" src="img/line-4-5.svg" />
+                    <div class="text-wrapper-17">PREPARACION</div>
+                    <div class="text-wrapper-18">200kcal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-2">
+                <div class="overlap-wrapper">
+                  <div class="div-2">
+                    <div class="group-3">
+                      <div class="overlap-4">
+                        <div class="carta-de-2">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-5"></div>
+                            <div class="text-wrapper-19">1 Sobre endulzante</div>
+                            <p class="text-wrapper-20">Acompañe con el pan tostado con queso.</p>
+                            <div class="text-wrapper-21">Mezcle bien.</div>
+                            <p class="text-wrapper-22">1 Cucharada de chocolate en polvo</p>
+                            <p class="text-wrapper-23">1/2 Taza de leche light</p>
+                            <p class="text-wrapper-24">1 rebanda de pan tostado</p>
+                            <div class="text-wrapper-25">20gr de queso panela</div>
+                            <p class="text-wrapper-26">
+                              En la licuadora coloque la leche, el chocolate, café y endulzante.
+                            </p>
+                            <p class="text-wrapper-27">1 Cucharada de café descafeinado</p>
+                          </div>
+                        </div>
+                        <img class="line-8" src="img/line-4-2.svg" />
+                      </div>
+                    </div>
+                    <img class="line-9" src="img/line-2-4.svg" />
+                    <img class="line-10" src="img/line-6.svg" />
+                    <img class="line-11" src="img/line-3-10.svg" />
+                    <img class="line-12" src="img/line-5-11.svg" />
+                    <p class="text-wrapper-28">PAN TOSTADO CON LICUADO DE MOKA</p>
+                    <div class="rectangle-6"></div>
+                    <div class="rectangle-7"></div>
+                    <div class="text-wrapper-29">INGREDIENTES</div>
+                    <img class="line-13" src="img/line-4-17.svg" />
+                    <img class="line-14" src="img/line-7.svg" />
+                    <div class="text-wrapper-30">PREPARACION</div>
+                    <div class="text-wrapper-31">185kcal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <p class="text-wrapper-10">Lechuga y jitomate al gusto</p>
+                          <p class="text-wrapper-11">1 rebanada de jamón de pavo</p>
+                          <p class="text-wrapper-12">1 Tortilla de harina integral</p>
+                          <div class="text-wrapper-13">40gr de queso panela</div>
+                          <p class="text-wrapper-32">
+                            En un sartén caliente la tortilla, agregue el queso y el jamón, asi como la lechuga y el
+                            jitomate.
+                          </p>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-16.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-10.svg" />
+                  <img class="line-4" src="img/line-6-11.svg" />
+                  <img class="line-5" src="img/line-3-8.svg" />
+                  <img class="line-6" src="img/line-5-3.svg" />
+                  <div class="text-wrapper-33">SINCRONIZADA</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-13.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">180kcal</div>
+                </div>
+              </div>
+            </div>
+            <div class="div-3">
+              <div class="overlap-6">
+                <p class="p">DESAYUNOS DE 200 A 300 kcal.</p>
+                <img class="line-15" src="img/line-1-2.svg" />
+              </div>
+            </div>
+            <div class="frame-3">
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-3">
+                      <div class="carta-de">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-2"></div>
+                          <p class="text-wrapper-34">1/3 de pieza de aguacate</p>
+                          <div class="text-wrapper-35">2 rebadanas de pan</div>
+                          <p class="text-wrapper-36">1 rebanada de jamón de pavo</p>
+                          <p class="text-wrapper-37">Jitomate y cebolla en rebanadas</p>
+                          <div class="text-wrapper-38">Lechuga</div>
+                          <div class="text-wrapper-39">Mostaza</div>
+                          <div class="flexcontainer">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >Coloque sobre una rebanda de pan el jamón, aguacate y las verduras. <br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper">
+                              <span class="span">En la otra rebanda unte la mostaza. <br /></span>
+                            </p>
+                            <p class="span-wrapper"><span class="span">Tape y disfrute de su sándwich.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-18.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2.svg" />
+                  <img class="line-4" src="img/line-6-9.svg" />
+                  <img class="line-5" src="img/line-3-5.svg" />
+                  <img class="line-6" src="img/line-5-7.svg" />
+                  <div class="text-wrapper-33">SANDWICH DE JAMON</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-12.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">225kcal</div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <div class="text-wrapper-11">1 cucharada de aceite</div>
+                          <div class="text-wrapper-10">1 tortilla de maíz</div>
+                          <div class="text-wrapper-12">1 huevo</div>
+                          <p class="text-wrapper-13">1/2 taza de ejotes picados y cocidos</p>
+                          <div class="flexcontainer-2">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >En un sarten caliente el aceite agregue el huevo y los ejotes. Mezcle bien.<br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper">
+                              <span class="span">Acompañe con la tortilla y puede agregar un poco de salsa.</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-21.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/image.svg" />
+                  <img class="line-4" src="img/line-6-6.svg" />
+                  <img class="line-5" src="img/line-3-9.svg" />
+                  <img class="line-6" src="img/line-5-4.svg" />
+                  <div class="text-wrapper-33">HUEVO CON EJOTE</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-7.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">205kcal</div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-3">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <p class="text-wrapper-40">3 piezas de nopales asados</p>
+                          <div class="text-wrapper-41">40gr de queso fresco</div>
+                          <div class="text-wrapper-42">2 tortillas de maíz</div>
+                          <div class="flexcontainer-3">
+                            <p class="text-2">
+                              <span class="text-wrapper-43">Para el pico de gallo:<br /></span>
+                            </p>
+                            <p class="text-2">
+                              <span class="text-wrapper-44"
+                                >2 piezas de jitomate picado con un poco de
+                                cebolla,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rodajas
+                                de chile serrano y cilantro al gusto.<br
+                              /></span>
+                            </p>
+                            <p class="text-2"><span class="text-wrapper-44"></span></p>
+                          </div>
+                          <div class="flexcontainer-4">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >Pique los nopales en cuadros y agregue los demás ingredientes.<br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper"><span class="span">Acompañe con las tortillas.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-14.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-6.svg" />
+                  <img class="line-4" src="img/line-6-3.svg" />
+                  <img class="line-5" src="img/line-3-6.svg" />
+                  <img class="line-6" src="img/line-5-9.svg" />
+                  <p class="text-wrapper-45">NOPALES ASADOS CON PICO DE GALLO</p>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-23.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">270kcal</div>
+                </div>
+              </div>
+            </div>
+            <div class="group-4">
+              <div class="div-3">
+                <p class="p">DESAYUNOS DE 300 A 400 kcal.</p>
+                <img class="line-16" src="img/line-1-4.svg" />
+              </div>
+            </div>
+            <div class="frame-3">
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-3">
+                      <div class="carta-de">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-2"></div>
+                          <p class="text-wrapper-34">1/3 de pieza de aguacate</p>
+                          <div class="text-wrapper-35">2 rebadanas de pan</div>
+                          <p class="text-wrapper-36">1 rebanada de jamón de pavo</p>
+                          <p class="text-wrapper-37">Jitomate y cebolla en rebanadas</p>
+                          <div class="text-wrapper-38">Lechuga</div>
+                          <div class="text-wrapper-39">Mostaza</div>
+                          <div class="flexcontainer">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >Coloque sobre una rebanda de pan el jamón, aguacate y las verduras. <br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper">
+                              <span class="span">En la otra rebanda unte la mostaza. <br /></span>
+                            </p>
+                            <p class="span-wrapper"><span class="span">Tape y disfrute de su sándwich.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-24.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-2.svg" />
+                  <img class="line-4" src="img/line-6-2.svg" />
+                  <img class="line-5" src="img/line-3-4.svg" />
+                  <img class="line-6" src="img/line-5-6.svg" />
+                  <div class="text-wrapper-33">SANDWICH DE JAMON</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-4.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">225kcal</div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <div class="text-wrapper-11">1 cucharada de aceite</div>
+                          <div class="text-wrapper-10">1 tortilla de maíz</div>
+                          <div class="text-wrapper-12">1 huevo</div>
+                          <p class="text-wrapper-13">1/2 taza de ejotes picados y cocidos</p>
+                          <div class="flexcontainer-2">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >En un sarten caliente el aceite agregue el huevo y los ejotes. Mezcle bien.<br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper">
+                              <span class="span">Acompañe con la tortilla y puede agregar un poco de salsa.</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-19.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-9.svg" />
+                  <img class="line-4" src="img/line-6-12.svg" />
+                  <img class="line-5" src="img/line-3-7.svg" />
+                  <img class="line-6" src="img/line-5-8.svg" />
+                  <div class="text-wrapper-33">HUEVO CON EJOTE</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-6.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">205kcal</div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-3">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <p class="text-wrapper-40">3 piezas de nopales asados</p>
+                          <div class="text-wrapper-41">40gr de queso fresco</div>
+                          <div class="text-wrapper-42">2 tortillas de maíz</div>
+                          <div class="flexcontainer-3">
+                            <p class="text-2">
+                              <span class="text-wrapper-43">Para el pico de gallo:<br /></span>
+                            </p>
+                            <p class="text-2">
+                              <span class="text-wrapper-44"
+                                >2 piezas de jitomate picado con un poco de
+                                cebolla,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rodajas
+                                de chile serrano y cilantro al gusto.<br
+                              /></span>
+                            </p>
+                            <p class="text-2"><span class="text-wrapper-44"></span></p>
+                          </div>
+                          <div class="flexcontainer-4">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >Pique los nopales en cuadros y agregue los demás ingredientes.<br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper"><span class="span">Acompañe con las tortillas.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-10.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-5.svg" />
+                  <img class="line-4" src="img/line-6-10.svg" />
+                  <img class="line-5" src="img/line-3-2.svg" />
+                  <img class="line-6" src="img/line-5.svg" />
+                  <p class="text-wrapper-45">NOPALES ASADOS CON PICO DE GALLO</p>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-20.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">270kcal</div>
+                </div>
+              </div>
+            </div>
+            <div class="group-4">
+              <div class="div-3">
+                <p class="p">DESAYUNOS DE 400 a 500 kcal.</p>
+                <img class="line-15" src="img/line-1.svg" />
+              </div>
+            </div>
+            <div class="frame-4">
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-3">
+                      <div class="carta-de">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-2"></div>
+                          <p class="text-wrapper-34">1/3 de pieza de aguacate</p>
+                          <div class="text-wrapper-35">2 rebadanas de pan</div>
+                          <p class="text-wrapper-36">1 rebanada de jamón de pavo</p>
+                          <p class="text-wrapper-37">Jitomate y cebolla en rebanadas</p>
+                          <div class="text-wrapper-38">Lechuga</div>
+                          <div class="text-wrapper-39">Mostaza</div>
+                          <div class="flexcontainer">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >Coloque sobre una rebanda de pan el jamón, aguacate y las verduras. <br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper">
+                              <span class="span">En la otra rebanda unte la mostaza. <br /></span>
+                            </p>
+                            <p class="span-wrapper"><span class="span">Tape y disfrute de su sándwich.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-15.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-3.svg" />
+                  <img class="line-4" src="img/line-6-8.svg" />
+                  <img class="line-5" src="img/line-3-11.svg" />
+                  <img class="line-6" src="img/line-5-2.svg" />
+                  <div class="text-wrapper-33">SANDWICH DE JAMON</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-3.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">225kcal</div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-2">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <div class="text-wrapper-11">1 cucharada de aceite</div>
+                          <div class="text-wrapper-10">1 tortilla de maíz</div>
+                          <div class="text-wrapper-12">1 huevo</div>
+                          <p class="text-wrapper-13">1/2 taza de ejotes picados y cocidos</p>
+                          <div class="flexcontainer-2">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >En un sarten caliente el aceite agregue el huevo y los ejotes. Mezcle bien.<br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper">
+                              <span class="span">Acompañe con la tortilla y puede agregar un poco de salsa.</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-11.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-7.svg" />
+                  <img class="line-4" src="img/line-6-7.svg" />
+                  <img class="line-5" src="img/line-3.svg" />
+                  <img class="line-6" src="img/line-5-12.svg" />
+                  <div class="text-wrapper-33">HUEVO CON EJOTE</div>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">205kcal</div>
+                </div>
+              </div>
+              <div class="overlap-wrapper-3">
+                <div class="div-2">
+                  <div class="group-3">
+                    <div class="overlap-5">
+                      <div class="carta-de-3">
+                        <div class="overlap-group-3">
+                          <div class="rectangle-5"></div>
+                          <p class="text-wrapper-40">3 piezas de nopales asados</p>
+                          <div class="text-wrapper-41">40gr de queso fresco</div>
+                          <div class="text-wrapper-42">2 tortillas de maíz</div>
+                          <div class="flexcontainer-3">
+                            <p class="text-2">
+                              <span class="text-wrapper-43">Para el pico de gallo:<br /></span>
+                            </p>
+                            <p class="text-2">
+                              <span class="text-wrapper-44"
+                                >2 piezas de jitomate picado con un poco de
+                                cebolla,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rodajas
+                                de chile serrano y cilantro al gusto.<br
+                              /></span>
+                            </p>
+                            <p class="text-2"><span class="text-wrapper-44"></span></p>
+                          </div>
+                          <div class="flexcontainer-4">
+                            <p class="span-wrapper">
+                              <span class="span"
+                                >Pique los nopales en cuadros y agregue los demás ingredientes.<br
+                              /></span>
+                            </p>
+                            <p class="span-wrapper"><span class="span">Acompañe con las tortillas.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <img class="line-2" src="img/line-4-22.svg" />
+                    </div>
+                  </div>
+                  <img class="line-3" src="img/line-2-8.svg" />
+                  <img class="line-4" src="img/line-6-5.svg" />
+                  <img class="line-5" src="img/line-3-12.svg" />
+                  <img class="line-6" src="img/line-5-10.svg" />
+                  <p class="text-wrapper-45">NOPALES ASADOS CON PICO DE GALLO</p>
+                  <div class="rectangle-3"></div>
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-16">INGREDIENTES</div>
+                  <img class="line-7" src="img/line-4-8.svg" />
+                  <div class="text-wrapper-17">PREPARACION</div>
+                  <div class="text-wrapper-18">270kcal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="FOOTER-wrapper">
+          <footer class="FOOTER">
+            <div class="inicio-sobre">
+              Inicio<br /><br />Sobre nosotros<br /><br />Servicios<br /><br />Blog o artículos<br /><br />Contacto
+            </div>
+            <p class="text-wrapper-46">© 2025 SmartBites. Todos los derechos reservados.</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+    function toggleDropdown(event) {
+  event.preventDefault();
+  var content = document.getElementById("dropdownContent");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  var submenu = document.getElementById("submenuContent");
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+
+// Cierra los menús si se hace clic fuera
+document.addEventListener("click", function(e) {
+  const dropdown = document.getElementById("dropdownContent");
+  const submenu = document.getElementById("submenuContent");
+  // Si el clic NO fue dentro de .dropdown ni .submenu-content
+  if (!e.target.closest('.dropdown')) {
+    if (dropdown) dropdown.style.display = "none";
+    if (submenu) submenu.style.display = "none";
+  }
+});
+</script>
+  </body>
+</html>

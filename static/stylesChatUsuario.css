@@ -1,0 +1,465 @@
+.NUTRIOLOGOS-chats {
+  background-color: #f8f8f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.NUTRIOLOGOS-chats .group-wrapper {
+  background-color: #f8f8f5;
+  overflow: hidden;
+  width: 1584px;
+  height: 875px;
+}
+
+.NUTRIOLOGOS-chats .group {
+  position: relative;
+  width: 1613px;
+  height: 775px;
+  top: 4px;
+  left: -37px;
+}
+
+.NUTRIOLOGOS-chats .div {
+  position: relative;
+  width: 1619px;
+  height: 775px;
+}
+
+.NUTRIOLOGOS-chats .overlap {
+  position: absolute;
+  width: 1222px;
+  height: 633px;
+  top: 142px;
+  left: 283px;
+}
+
+.NUTRIOLOGOS-chats .rectangle {
+  position: absolute;
+  width: 1211px;
+  height: 625px;
+  top: 8px;
+  left: 0;
+  background-color: #9fbf99;
+  border-radius: 26px;
+}
+
+.NUTRIOLOGOS-chats .img {
+  position: absolute;
+  width: 487px;
+  height: 96px;
+  top: 443px;
+  left: 53px;
+}
+
+.NUTRIOLOGOS-chats .rectangle-2 {
+  position: absolute;
+  width: 500px;
+  height: 167px;
+  top: 102px;
+  left: 53px;
+}
+
+.NUTRIOLOGOS-chats .rectangle-3 {
+  position: absolute;
+  width: 490px;
+  height: 106px;
+  top: 321px;
+  left: 686px;
+}
+
+.NUTRIOLOGOS-chats .rectangle-4 {
+  position: absolute;
+  width: 1141px;
+  height: 37px;
+  top: 573px;
+  left: 53px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper {
+  position: absolute;
+  top: 580px;
+  left: 82px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.NUTRIOLOGOS-chats .icon-return {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 578px;
+  left: 1152px;
+}
+
+.NUTRIOLOGOS-chats .icon-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 577px;
+  left: 1198px;
+}
+
+.NUTRIOLOGOS-chats .icon-chevron-left {
+  position: absolute;
+  width: 39px;
+  height: 52px;
+  top: 0;
+  left: 79px;
+}
+
+.NUTRIOLOGOS-chats .rectangle-5 {
+  position: absolute;
+  width: 1211px;
+  height: 44px;
+  top: 8px;
+  left: 0;
+  background-color: #8bc77b;
+}
+
+.NUTRIOLOGOS-chats .ellipse {
+  position: absolute;
+  width: 43px;
+  height: 39px;
+  top: 13px;
+  left: 60px;
+  object-fit: cover;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-2 {
+  position: absolute;
+  top: 8px;
+  left: 117px;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-3 {
+  position: absolute;
+  width: 233px;
+  top: 22px;
+  left: 35px;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.NUTRIOLOGOS-chats .arrow-down {
+  position: absolute;
+  width: 40px;
+  height: 43px;
+  top: 11px;
+  left: 21px;
+}
+
+.NUTRIOLOGOS-chats .photo-video-camera {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 719px;
+  left: 1515px;
+  background-image: url(./img/camera.svg);
+  background-size: 100% 100%;
+}
+
+.NUTRIOLOGOS-chats .BARRA-SELECCION {
+  position: absolute;
+  width: 1555px;
+  height: 69px;
+  top: 5px;
+  left: 0;
+}
+
+.NUTRIOLOGOS-chats .overlap-group {
+  position: relative;
+  width: 1559px;
+  height: 69px;
+}
+
+.NUTRIOLOGOS-chats .group-2 {
+  position: absolute;
+  width: 1559px;
+  height: 41px;
+  top: 4px;
+  left: 0;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-4 {
+  position: absolute;
+  width: 45px;
+  top: 10px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-5 {
+  position: absolute;
+  width: 140px;
+  top: 6px;
+  left: 150px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.NUTRIOLOGOS-chats .input-field {
+  display: flex;
+  flex-direction: column;
+  width: 217px;
+  height: 30px;
+  align-items: flex-start;
+  padding: 0px 0px 1px;
+  position: absolute;
+  top: 0;
+  left: 1338px;
+}
+
+.NUTRIOLOGOS-chats .input-field-base {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -18.53px;
+}
+
+.NUTRIOLOGOS-chats .input-with-label {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.NUTRIOLOGOS-chats .input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--gray-300);
+  box-shadow: var(--shadow-xs);
+}
+
+.NUTRIOLOGOS-chats .content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.NUTRIOLOGOS-chats .search {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.NUTRIOLOGOS-chats .text {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--text-md-normal-font-family);
+  font-weight: var(--text-md-normal-font-weight);
+  color: var(--gray-500);
+  font-size: var(--text-md-normal-font-size);
+  letter-spacing: var(--text-md-normal-letter-spacing);
+  line-height: var(--text-md-normal-line-height);
+  font-style: var(--text-md-normal-font-style);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.NUTRIOLOGOS-chats .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 22px;
+  left: 784px;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-6 {
+  position: relative;
+  width: 51px;
+  height: 19px;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-7 {
+  position: relative;
+  width: 46px;
+  height: 19px;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.NUTRIOLOGOS-chats .text-wrapper-8 {
+  position: relative;
+  width: 114px;
+  height: 18px;
+  margin-top: -0.50px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.NUTRIOLOGOS-chats .hojasin {
+  position: absolute;
+  width: 55px;
+  height: 69px;
+  top: 0;
+  left: 89px;
+  object-fit: cover;
+}
+
+.NUTRIOLOGOS-chats .icon-user {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  top: 0;
+  left: 1555px;
+}
+/* Original CSS code should be injected here */
+
+/* Additional styles and modifications */
+.NUTRIOLOGOS-chats {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.BARRA-SELECCION {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f8f8f5;
+}
+
+.group-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlap {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rectangle-5 {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.icon-chevron-left {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.rectangle-4 {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.icon-return,
+.icon-pin {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.photo-video-camera,
+.icon-user {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .BARRA-SELECCION .frame {
+    display: none;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .overlap {
+    width: 95%;
+  }
+}

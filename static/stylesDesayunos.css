@@ -1,0 +1,1446 @@
+.RECETAS-DESAYUNOS {
+  background-color: #f8f8f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.header {
+  background-color: #f8f8f5;
+  padding: 1rem;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 61px;
+  height: 77px;
+}
+
+.logo-text {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0 auto;
+  justify-content: center;
+  flex: 1;
+
+}
+
+.nav-link {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+.nav-link:hover {
+  transform: translateY(-4px); /* 👈 Se levanta */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 👈 Sombra para dar efecto de elevación */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-family: var(--text-md-normal-font-family);
+  font-size: var(--text-md-normal-font-size);
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.user-icon {
+  width: 58px;
+  height: 58px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.main-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* BOTON DE BLOG */
+.dropdown-content {
+  font-family: "Poppins-Light", Helvetica;
+  display: none;            /* oculto por defecto */
+  flex-direction: column;   /* los botones se apilan verticalmente */
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background: white;
+}
+.dropdown-content a,
+.dropdown-content a:visited,
+.dropdown-content button:visited {
+  color: #000000;
+  text-decoration: none;
+}
+.dropdown-content a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.dropdown-content button {
+  display: block;
+  width: 100%; /* ocupa todo el ancho del contenedor */
+  padding: 10px;
+  margin-bottom: 6px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  text-align: left;
+  box-sizing: border-box; /* asegura que padding no empuje el ancho */
+}
+
+.dropdown-content a:hover {
+  background-color: #e0e0e0;
+  color: #000000; /* Cambia el color del texto al pasar el mouse */
+}
+
+.submenu-content {
+  position: absolute;
+  left: 100%;      /* Despliega a la derecha */
+  top: 0;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  min-width: 120px;
+  display: none;
+  flex-direction: column;
+}
+
+.submenu-content a {
+  padding: 8px 14px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu-content a:hover {
+  background: #e0e0e0;
+}
+.RECETAS-DESAYUNOS .div {
+  background-color: #f8f8f5;
+  overflow: hidden;
+  width: 1436px;
+  height: 3863px;
+  position: relative;
+}
+
+.RECETAS-DESAYUNOS .overlap {
+  position: absolute;
+  width: 1457px;
+  height: 201px;
+  top: 0;
+  left: -17px;
+}
+
+
+
+.RECETAS-DESAYUNOS .group {
+  position: absolute;
+  width: 1445px;
+  height: 195px;
+  top: 6px;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .group-2 {
+  position: absolute;
+  width: 1379px;
+  height: 68px;
+  top: 0;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .overlap-group {
+  position: absolute;
+  width: 107px;
+  height: 68px;
+  top: 0;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper {
+  position: absolute;
+  width: 43px;
+  top: 23px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .ellipse {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  top: 0;
+  left: 39px;
+  background-color: #d9d9d9;
+  border-radius: 34px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-2 {
+  position: absolute;
+  width: 51px;
+  top: 23px;
+  left: 595px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-3 {
+  position: absolute;
+  width: 74px;
+  top: 23px;
+  left: 805px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-4 {
+  position: absolute;
+  top: 16px;
+  left: 119px;
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: 700;
+  color: #3a3a3a;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.RECETAS-DESAYUNOS .input-field {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  height: 34px;
+  align-items: flex-start;
+  position: absolute;
+  top: 10px;
+  left: 1159px;
+}
+
+.RECETAS-DESAYUNOS .input-field-base {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -14.00px;
+}
+
+.RECETAS-DESAYUNOS .input-with-label {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.RECETAS-DESAYUNOS .input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--gray-300);
+  box-shadow: var(--shadow-xs);
+}
+
+.RECETAS-DESAYUNOS .content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.RECETAS-DESAYUNOS .search {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.RECETAS-DESAYUNOS .text {
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--text-md-normal-font-family);
+  color: var(--gray-500);
+  font-size: var(--text-md-normal-font-size);
+  line-height: var(--text-md-normal-line-height);
+  position: relative;
+  font-weight: var(--text-md-normal-font-weight);
+  letter-spacing: var(--text-md-normal-letter-spacing);
+  font-style: var(--text-md-normal-font-style);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-5 {
+  position: absolute;
+  top: 23px;
+  left: 682px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-6 {
+  width: 566px;
+  top: 170px;
+  left: 452px;
+  font-family: "Poppins-ExtraBold", Helvetica;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 7.20px;
+  position: absolute;
+  color: #3a3a3a;
+  text-align: center;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .hojasin {
+  position: absolute;
+  width: 61px;
+  height: 77px;
+  top: 10px;
+  left: 42px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .overlap-2 {
+  position: absolute;
+  width: 1322px;
+  height: 2407px;
+  top: 317px;
+  left: 58px;
+}
+
+.RECETAS-DESAYUNOS .BOTON-CATEGORIA {
+  position: absolute;
+  width: 202px;
+  height: 169px;
+  top: 0;
+  left: 2px;
+}
+
+.RECETAS-DESAYUNOS .div-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #a8c9a2;
+  border-radius: 15px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-7 {
+  position: absolute;
+  width: 118px;
+  top: 9px;
+  left: 22px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 16px;
+  letter-spacing: 1.60px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 145px;
+  left: 174px;
+}
+
+.RECETAS-DESAYUNOS .frame {
+  display: flex;
+  flex-direction: column;
+  width: 1322px;
+  align-items: flex-start;
+  gap: 66px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .overlap-group-wrapper {
+  position: relative;
+  width: 362px;
+  height: 30px;
+}
+
+.RECETAS-DESAYUNOS .overlap-group-2 {
+  position: relative;
+  width: 360px;
+  height: 30px;
+}
+
+.RECETAS-DESAYUNOS .p {
+  top: 0;
+  left: 0;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0;
+  position: absolute;
+  color: #3a3a3a;
+  text-align: center;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .line {
+  left: 4px;
+  position: absolute;
+  width: 353px;
+  height: 1px;
+  top: 29px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .frame-2 {
+  display: flex;
+  width: 1397px;
+  height: 597px;
+  align-items: center;
+  gap: 56px;
+  position: relative;
+  margin-right: -75.00px;
+}
+
+.RECETAS-DESAYUNOS .div-2 {
+  position: relative;
+  width: 403px;
+  height: 597px;
+}
+
+.RECETAS-DESAYUNOS .overlap-wrapper {
+  width: 411px;
+  height: 597px;
+}
+
+.RECETAS-DESAYUNOS .group-3 {
+  position: absolute;
+  width: 403px;
+  height: 597px;
+  top: 0;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .overlap-3 {
+  position: relative;
+  width: 417px;
+  height: 597px;
+}
+
+.RECETAS-DESAYUNOS .carta-de {
+  position: absolute;
+  width: 417px;
+  height: 597px;
+  top: 0;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .overlap-group-3 {
+  position: relative;
+  width: 403px;
+  height: 597px;
+  background-color: #a8c9a2;
+  box-shadow: 0px 1px 3px #0000004c, 0px 4px 8px 3px #00000026;
+}
+
+.RECETAS-DESAYUNOS .rectangle-2 {
+  position: absolute;
+  width: 384px;
+  height: 580px;
+  top: 9px;
+  left: 8px;
+  background-color: #f8f8f5;
+  box-shadow: 0px 1px 3px #0000004c, 0px 4px 8px 3px #00000026;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-8 {
+  position: absolute;
+  width: 195px;
+  top: 446px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-9 {
+  position: absolute;
+  top: 426px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-10 {
+  top: 255px;
+  left: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-11 {
+  top: 225px;
+  left: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-12 {
+  top: 165px;
+  left: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-13 {
+  position: absolute;
+  top: 195px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-14 {
+  position: absolute;
+  width: 144px;
+  top: 346px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.RECETAS-DESAYUNOS .line-2 {
+  width: 59px;
+  height: 1px;
+  top: 330px;
+  left: 175px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-3 {
+  width: 344px;
+  height: 1px;
+  top: 24px;
+  left: 30px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-4 {
+  width: 344px;
+  height: 1px;
+  top: 549px;
+  left: 30px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-5 {
+  width: 344px;
+  height: 1px;
+  top: 113px;
+  left: 30px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-6 {
+  width: 344px;
+  height: 1px;
+  top: 303px;
+  left: 30px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-15 {
+  position: absolute;
+  width: 344px;
+  top: 38px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.RECETAS-DESAYUNOS .rectangle-3 {
+  position: absolute;
+  width: 140px;
+  height: 25px;
+  top: 127px;
+  left: 30px;
+  background-color: #a8c9a2;
+  border-radius: 15px;
+}
+
+.RECETAS-DESAYUNOS .rectangle-4 {
+  position: absolute;
+  width: 140px;
+  height: 25px;
+  top: 318px;
+  left: 234px;
+  background-color: #a8c9a2;
+  border-radius: 15px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-16 {
+  top: 125px;
+  left: 50px;
+  position: absolute;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 1.80px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .line-7 {
+  top: 139px;
+  left: 170px;
+  position: absolute;
+  width: 59px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-17 {
+  top: 316px;
+  left: 254px;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  position: absolute;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 1.80px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-18 {
+  position: absolute;
+  top: 560px;
+  left: 138px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #a8c9a2;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .overlap-4 {
+  position: relative;
+  width: 421px;
+  height: 597px;
+}
+
+.RECETAS-DESAYUNOS .carta-de-2 {
+  width: 421px;
+  position: absolute;
+  height: 597px;
+  top: 0;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .rectangle-5 {
+  position: absolute;
+  width: 384px;
+  height: 580px;
+  top: 9px;
+  left: 10px;
+  background-color: #f8f8f5;
+  box-shadow: 0px 1px 3px #0000004c, 0px 4px 8px 3px #00000026;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-19 {
+  top: 198px;
+  left: 223px;
+  line-height: 15px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-20 {
+  position: absolute;
+  width: 195px;
+  top: 435px;
+  left: 32px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-21 {
+  position: absolute;
+  top: 403px;
+  left: 32px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-22 {
+  width: 160px;
+  top: 236px;
+  left: 30px;
+  line-height: 15px;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-23 {
+  position: absolute;
+  top: 205px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-24 {
+  top: 156px;
+  left: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-25 {
+  position: absolute;
+  top: 179px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-26 {
+  position: absolute;
+  width: 221px;
+  top: 351px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-27 {
+  width: 180px;
+  top: 160px;
+  left: 223px;
+  line-height: 15px;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .line-8 {
+  top: 325px;
+  left: 177px;
+  position: absolute;
+  width: 59px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-9 {
+  position: absolute;
+  width: 344px;
+  height: 1px;
+  top: 19px;
+  left: 32px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-10 {
+  position: absolute;
+  width: 344px;
+  height: 1px;
+  top: 544px;
+  left: 32px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-11 {
+  position: absolute;
+  width: 344px;
+  height: 1px;
+  top: 108px;
+  left: 32px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-12 {
+  position: absolute;
+  width: 344px;
+  height: 1px;
+  top: 298px;
+  left: 32px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-28 {
+  position: absolute;
+  width: 344px;
+  top: 33px;
+  left: 32px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.RECETAS-DESAYUNOS .rectangle-6 {
+  position: absolute;
+  width: 140px;
+  height: 25px;
+  top: 122px;
+  left: 32px;
+  background-color: #a8c9a2;
+  border-radius: 15px;
+}
+
+.RECETAS-DESAYUNOS .rectangle-7 {
+  position: absolute;
+  width: 140px;
+  height: 25px;
+  top: 313px;
+  left: 236px;
+  background-color: #a8c9a2;
+  border-radius: 15px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-29 {
+  top: 120px;
+  left: 52px;
+  position: absolute;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 1.80px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .line-13 {
+  top: 134px;
+  left: 172px;
+  position: absolute;
+  width: 59px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .line-14 {
+  width: 1px;
+  height: 47px;
+  top: 181px;
+  left: 207px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-30 {
+  top: 311px;
+  left: 256px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  position: absolute;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 1.80px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-31 {
+  position: absolute;
+  top: 555px;
+  left: 140px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #a8c9a2;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .overlap-wrapper-2 {
+  position: relative;
+  width: 411px;
+  height: 597px;
+}
+
+.RECETAS-DESAYUNOS .overlap-5 {
+  position: relative;
+  width: 413px;
+  height: 597px;
+}
+
+.RECETAS-DESAYUNOS .carta-de-3 {
+  width: 413px;
+  position: absolute;
+  height: 597px;
+  top: 0;
+  left: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-32 {
+  position: absolute;
+  width: 250px;
+  top: 370px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-33 {
+  position: absolute;
+  width: 344px;
+  top: 51px;
+  left: 28px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.RECETAS-DESAYUNOS .div-3 {
+  position: relative;
+  width: 368px;
+  height: 30px;
+}
+
+.RECETAS-DESAYUNOS .overlap-6 {
+  position: relative;
+  width: 366px;
+  height: 30px;
+}
+
+.RECETAS-DESAYUNOS .line-15 {
+  width: 353px;
+  height: 1px;
+  top: 29px;
+  left: 7px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .frame-3 {
+  display: flex;
+  height: 597px;
+  align-items: center;
+  gap: 56px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-34 {
+  position: absolute;
+  top: 193px;
+  left: 28px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-35 {
+  top: 155px;
+  left: 28px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-36 {
+  top: 174px;
+  left: 28px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-37 {
+  position: absolute;
+  top: 212px;
+  left: 28px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-38 {
+  position: absolute;
+  top: 231px;
+  left: 28px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-39 {
+  position: absolute;
+  top: 248px;
+  left: 28px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .flexcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  position: absolute;
+  width: 250px;
+  height: 83px;
+  top: 370px;
+  left: 30px;
+}
+
+.RECETAS-DESAYUNOS .span-wrapper {
+  align-self: stretch;
+  font-family: "Poppins-Regular", Helvetica;
+  color: #3a3a3a;
+  font-size: 12px;
+  line-height: 20px;
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .span {
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.RECETAS-DESAYUNOS .flexcontainer-2 {
+  width: 250px;
+  height: 100px;
+  top: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  position: absolute;
+  left: 30px;
+}
+
+.RECETAS-DESAYUNOS .overlap-wrapper-3 {
+  position: relative;
+  width: 411px;
+  height: 597px;
+  margin-right: -7.00px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-40 {
+  top: 163px;
+  left: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-41 {
+  position: absolute;
+  top: 206px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-42 {
+  top: 184px;
+  left: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .flexcontainer-3 {
+  width: 364px;
+  height: 60px;
+  top: 236px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  position: absolute;
+  left: 30px;
+}
+
+.RECETAS-DESAYUNOS .text-2 {
+  align-self: stretch;
+  font-family: "Poppins-Regular", Helvetica;
+  color: #3a3a3a;
+  font-size: 12px;
+  line-height: 12px;
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-43 {
+  line-height: 8px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-44 {
+  line-height: 15px;
+}
+
+.RECETAS-DESAYUNOS .flexcontainer-4 {
+  width: 250px;
+  height: 66px;
+  top: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  position: absolute;
+  left: 30px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-45 {
+  position: absolute;
+  width: 344px;
+  top: 39px;
+  left: 30px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.RECETAS-DESAYUNOS .group-4 {
+  position: relative;
+  width: 370px;
+  height: 30px;
+}
+
+.RECETAS-DESAYUNOS .line-16 {
+  left: 8px;
+  position: absolute;
+  width: 353px;
+  height: 1px;
+  top: 29px;
+  object-fit: cover;
+}
+
+.RECETAS-DESAYUNOS .frame-4 {
+  display: flex;
+  width: 1322px;
+  height: 597px;
+  align-items: center;
+  gap: 56px;
+  position: absolute;
+  top: 2394px;
+  left: 0;
+}
+
+/* Footer styles */
+.RECETAS-DESAYUNOS .FOOTER-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  top: 3546px;
+  left: -1px;
+  background-color: #f8f8f5;
+  border: 1px solid;
+  border-color: #a8c9a2;
+  border-right: none;
+  border-bottom: none;
+}
+
+.RECETAS-DESAYUNOS .FOOTER {
+  position: relative;
+  width: 1314px;
+  height: 244px;
+  top: 36px;
+  left: 88px;
+  background-color: transparent;
+}
+
+.RECETAS-DESAYUNOS .inicio-sobre {
+  position: absolute;
+  width: 159px;
+  top: 0;
+  left: 0;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22.4px;
+  text-decoration: underline;
+}
+
+
+.RECETAS-DESAYUNOS .x-logo {
+  position: relative;
+  width: 23.98px;
+  height: 24px;
+}
+
+.RECETAS-DESAYUNOS .img-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.RECETAS-DESAYUNOS .linked-in {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: -8.91px;
+}
+
+.RECETAS-DESAYUNOS .contacto-contacto {
+  position: absolute;
+  width: 186px;
+  top: 0;
+  left: 1122px;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22.4px;
+}
+
+.RECETAS-DESAYUNOS .text-wrapper-46 {
+  position: absolute;
+  width: 411px;
+  top: 198px;
+  left: 400px;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22.4px;
+}

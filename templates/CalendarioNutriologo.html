@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>SmartBites Calendario</title>
+  <link rel="stylesheet" href="globalCalendario.css" />
+  <link rel="stylesheet" href="../static/stylesCalendario.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <style>
+    .dropdown-content, .submenu-content {
+      z-index: 9999;
+    }
+    .nav {
+      position: relative;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+  <div class="NUTRIOLOGOS-perfil">
+    <div class="div">
+      <div class="overlap">
+        <header class="header">
+          <nav class="nav">
+            <div class="logo">
+              <img src="../static/img/HojaSin.png" alt="Logo SmartBites" class="logo-img" />
+              <h1 class="logo-text">SmartBites</h1>
+            </div>
+            <ul class="nav-links">
+              <li><a href="{{ url_for('PrincipalRegistrada') }}" class="nav-link">INICIO</a></li>
+              <li class="dropdown">
+                <a href="#" class="nav-link" onclick="toggleDropdown(event)">BLOG</a>
+                <div id="dropdownContent" class="dropdown-content">
+                  <a href="#" onclick="toggleSubmenu(event)" style="position: relative;">RECETAS</a>
+                  <div id="submenuContent" class="submenu-content">
+                    <a href="{{ url_for('desayunos') }}">DESAYUNOS</a>
+                    <a href="{{ url_for('comidas') }}">COMIDAS</a>
+                    <a href="{{ url_for('cenas') }}">CENAS</a>
+                    <a href="{{ url_for('colaciones') }}">COLACIONES</a>
+                  </div>
+                </div>
+              </li>
+              <li><a href="{{ url_for('nutriologos') }}" class="nav-link">NUTRIÓLOGOS</a></li>
+            </ul>
+            <form class="search-form" role="search">
+              <img src="../static/img/iconobuscar.png" alt="Buscar" class="search-icon" />
+              <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            </form>
+            <a href="{{ url_for('login') }}" class="user-icon" aria-label="Perfil de usuario">
+              <img src="../static/img/iconousuario.png" alt="Icono de usuario" class="icon-user" />
+            </a>
+          </nav>
+        </header>  
+
+        <div class="overlap-group">
+          <div class="overlap-group-2">
+            <!-- Calendario flotante -->
+            <div class="calendario-flotante">
+              <div class="calendario-wrapper">
+                <div id="calendar"></div>
+              </div>
+            </div>
+            <!-- Fin calendario -->
+            <div class="rectangle"></div>
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-2">CALENDARIO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones centrados debajo del calendario -->
+      <div class="acciones-container">
+        <button class="accion-btn">Editar</button>
+        <button class="accion-btn guardar">Guardar</button>
+
+      </div>
+
+      <div class="rectangle-3"></div>
+    </div>
+  </div>
+
+  <!-- Scripts de FullCalendar -->
+   <script>const nutriologoID = {{ nutriologo_id }};</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script>
+let horariosSeleccionados = [];
+
+function toggleHora(fecha, hora, boton) {
+  const index = horariosSeleccionados.findIndex(item => item.fecha === fecha && item.hora === hora);
+  if (index > -1) {
+    horariosSeleccionados.splice(index, 1); // quitar
+    boton.classList.remove('seleccionado');
+  } else {
+    horariosSeleccionados.push({ fecha, hora });
+    boton.classList.add('seleccionado');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const calendarEl = document.getElementById('calendar');
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridWeek',
+    locale: 'es',
+    headerToolbar: {
+      left: 'prev,next',
+      center: 'title',
+      right: ''
+    },
+    dayCellDidMount: function(info) {
+      const horariosContainer = document.createElement('div');
+      horariosContainer.classList.add('horarios-container');
+
+      const fechaStr = info.date.toISOString().split('T')[0];
+
+      for (let h = 7; h <= 20; h++) {
+        const horaTexto = `${h.toString().padStart(2, '0')}:00`;
+        const btn = document.createElement('button');
+        btn.className = 'horario-btn';
+        btn.innerText = horaTexto;
+        btn.onclick = () => toggleHora(fechaStr, horaTexto, btn);
+        horariosContainer.appendChild(btn);
+      }
+
+      const frame = info.el.querySelector('.fc-daygrid-day-frame');
+      if (frame) frame.appendChild(horariosContainer);
+    }
+  });
+
+  calendar.render();
+
+  // Botón guardar
+  document.querySelector('.accion-btn.guardar').addEventListener('click', () => {
+    if (horariosSeleccionados.length === 0) {
+      alert("No hay horarios seleccionados.");
+      return;
+    }
+
+    fetch('/guardar_disponibilidad', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        nutriologo_id: nutriologoID,
+        horarios: horariosSeleccionados
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        alert("¡Disponibilidad guardada exitosamente!");
+      } else {
+        alert("Error: " + data.message);
+      }
+    })
+    .catch(error => {
+      console.error("Error en la solicitud:", error);
+    });
+  });
+});
+</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridWeek',
+        locale: 'es',
+        headerToolbar: {
+          left: 'prev,next',
+          center: 'title',
+          right: ''
+        },
+        dayCellContent: function(arg) {
+          arg.dayNumberText = arg.dayNumberText;
+        },
+        dayCellDidMount: function(info) {
+          const horariosContainer = document.createElement('div');
+          horariosContainer.classList.add('horarios-container');
+          for (let h = 5; h <= 23; h++) {
+            const horaTexto = `${h.toString().padStart(2, '0')}:00`;
+            const btn = document.createElement('button');
+            btn.className = 'horario-btn';
+            btn.innerText = horaTexto;
+            btn.onclick = () => {
+              alert(`Hora seleccionada: ${horaTexto} del día ${info.date.toISOString().split('T')[0]}`);
+            };
+            horariosContainer.appendChild(btn);
+          }
+          const frame = info.el.querySelector('.fc-daygrid-day-frame');
+          if (frame) {
+            frame.appendChild(horariosContainer);
+          }
+        }
+      });
+      calendar.render();
+    });
+
+    // Dropdown
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const content = document.getElementById("dropdownContent");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      const submenu = document.getElementById("submenuContent");
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+
+    // Cerrar dropdown si se hace clic fuera
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest('.dropdown')) {
+        const menu = document.getElementById("dropdownContent");
+        const submenu = document.getElementById("submenuContent");
+        if (menu) menu.style.display = "none";
+        if (submenu) submenu.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

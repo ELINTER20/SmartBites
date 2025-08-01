@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/globalPerfilUsuario.css" />
+    <link rel="stylesheet" href="../static/styleguidePerfilUsuario.css" />
+    <link rel="stylesheet" href="../static/stylesPerfilUsuario.css" />
+    <title>SmartBites - Perfil de Usuario</title>
+  </head>
+  <body>
+    <div class="recetas-desayunos">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo">
+            <img src="../static/img/HojaSin.png" alt="Logo SmartBites" class="logo-img" />
+            <h1 class="logo-text">SmartBites</h1>
+          </div>
+         <ul class="nav-links">
+            <li><a href="{{ url_for('PrincipalRegistrada') }}" class="nav-link">INICIO</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link" onclick="toggleDropdown(event)">BLOG</a>
+              <div id="dropdownContent" class="dropdown-content" style="display: none;">
+                <a href="#" onclick="toggleSubmenu(event)" style="position: relative;">RECETAS </a>
+                <div id="submenuContent" class="submenu-content" style="display: none;">
+                  <a href="{{ url_for('desayunos') }}">DESAYUNOS</a>
+                  <a href="{{ url_for('comidas') }}">COMIDAS</a>
+                  <a href="{{ url_for('cenas') }}">CENAS</a>
+                  <a href="{{ url_for('colaciones') }}">COLACIONES</a>
+                </div>
+                <a href="#"></a>
+              </div>
+            </li>
+            <li><a href="{{ url_for('nutriologos') }}" class="nav-link">NUTRIOLOGOS</a></li>
+          </ul>
+          <form class="search-form" role="search">
+            <img src="../static/img/iconobuscar.png" alt="Buscar" class="search-icon" />
+            <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            <button class="search-button" type="submit">
+            </button>
+          </form>
+          
+
+        </nav>
+      </header>
+      <main>
+        <section class="user-profile">
+          <img class="profile-picture" 
+            src="{{ url_for('static', filename='img/' + (usuario.foto_perfil if usuario.foto_perfil else 'default.jpg')) }}" 
+            alt="Foto de perfil del usuario">
+         <h2 class="user-name">{{ usuario.nombre_completo }}</h2>
+            <a href="#" class="edit-profile-button" onclick="abrirModal()">Editar perfil</a>
+            <dl class="user-details">
+            <dt>Correo electrónico:</dt>
+            <dd>{{ usuario.correo }}</dd>
+            <dt>País:</dt>
+            <dd>{{ usuario.pais }}</dd>
+            <dt>Número de teléfono:</dt>
+            <dd>{{ usuario.telefono }}</dd>
+            </dl>
+
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <h3>SmartBites</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contáctanos</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <p class="copyright">© 2025 SmartBites. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </div>
+    <div id="modalEditarPerfil" class="modal">
+  <div class="modal-content">
+  <span class="close" onclick="cerrarModal()">&times;</span>
+  <h2>Editar Perfil</h2>
+  <form class="form-editar" action="{{ url_for('actualizar_perfil') }}" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" value="{{ usuario.nombre_completo }}" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="correo" value="{{ usuario.correo }}" required>
+    </div>
+    <div class="form-group">
+      <label for="ciudad">Ciudad / País:</label>
+      <input type="text" id="ciudad" name="pais" value="{{ usuario.pais }}" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" value="{{ usuario.telefono }}" required>
+    </div>
+    <div class="form-group">
+      <label for="contrasena">Nueva contraseña:</label>
+      <input type="password" id="contrasena" name="nueva_contraseña" value="" placeholder="Dejar en blanco para no cambiarla">
+    </div>
+    <div class="form-group">
+      <label for="foto">Foto de perfil:</label>
+      <input type="file" id="foto_perfil" name="foto_perfil" accept="image/*">
+    </div>
+    <button type="submit" class="btn-guardar">Guardar cambios</button>
+  </form>
+</div>
+  </div>
+</div>
+    <script>
+  function abrirModal() {
+    document.getElementById("modalEditarPerfil").style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById("modalEditarPerfil").style.display = "none";
+  }
+
+  // Cierra el modal si se hace clic fuera de él
+  window.onclick = function(event) {
+    var modal = document.getElementById("modalEditarPerfil");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+function toggleDropdown(event) {
+  event.preventDefault();
+  var content = document.getElementById("dropdownContent");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  var submenu = document.getElementById("submenuContent");
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+
+// Cierra los menús si se hace clic fuera
+document.addEventListener("click", function(e) {
+  const dropdown = document.getElementById("dropdownContent");
+  const submenu = document.getElementById("submenuContent");
+  // Si el clic NO fue dentro de .dropdown ni .submenu-content
+  if (!e.target.closest('.dropdown')) {
+    if (dropdown) dropdown.style.display = "none";
+    if (submenu) submenu.style.display = "none";
+  }
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/globalColaciones.css" />
+    <link rel="stylesheet" href="../static/styleguideColaciones.css" />
+    <link rel="stylesheet" href="../static/stylesColaciones.css" />
+  </head>
+  <body>
+    <div class="RECETAS-COLACIONES">
+      <div class="div">
+        <div class="overlap">
+        <header class="header">
+            <nav class="nav">
+              <div class="logo">
+                <img src="../static/img/HojaSin.png" alt="Logo SmartBites" class="logo-img" />
+                <h1 class="logo-text">SmartBites</h1>
+              </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('PrincipalRegistrada') }}" class="nav-link">INICIO</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">BLOG</a>
+                  <div id="dropdownContent" class="dropdown-content" style="display: none;">
+                    <a href="#" onclick="toggleSubmenu(event)" style="position: relative;">RECETAS </a>
+                    <div id="submenuContent" class="submenu-content" style="display: none;">
+                      <a href="{{ url_for('desayunos') }}">DESAYUNOS</a>
+                      <a href="{{ url_for('comidas') }}">COMIDAS</a>
+                      <a href="{{ url_for('cenas') }}">CENAS</a>
+                      <a href="{{ url_for('colaciones') }}">COLACIONES</a>
+                    </div>
+                    <a href="#"></a>
+                  </div>
+                </li>
+                <li><a href="#" class="nav-link">NUTRIOLOGOS</a></li>
+              </ul>
+              <form class="search-form" role="search">
+                <img src="../static/img/iconobuscar.png" alt="Buscar" class="search-icon" />
+                <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+                <button class="search-button" type="submit">
+                </button>
+              </form>
+              <a href="{{ url_for('login') }}" class="user-icon" aria-label="Perfil de usuario">
+                <img src="../static/img/iconousuario.png" alt="Icono de usuario" class="icon-user" />
+              </a>
+            </nav>
+        </header>  
+          
+        <div class="frame">
+          <div class="frame-2">
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group-2">
+                <p class="p">COLACIONES CON MENOS DE 100 kcal.</p>
+                <img class="line" src="img/line-1.svg" />
+              </div>
+            </div>
+            <div class="frame-3">
+              <div class="div-3">
+                <div class="overlap-wrapper">
+                  <div class="div-3">
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-2.svg" />
+                        <img class="line-2" src="img/line-5-16.svg" />
+                      </div>
+                    </div>
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="line-3" src="img/line-4-9.svg" />
+                        <img class="line-2" src="img/line-5-5.svg" />
+                      </div>
+                    </div>
+                    <img class="line-4" src="img/line-2-3.svg" />
+                    <img class="line-5" src="img/line-3.svg" />
+                    <img class="line-6" src="img/line-5-3.svg" />
+                    <div class="text-wrapper-13">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-3"></div>
+                    <div class="rectangle-4"></div>
+                    <div class="text-wrapper-14">COLACION MATUTINA</div>
+                    <img class="line-7" src="img/line-4-5.svg" />
+                    <div class="text-wrapper-15">COLACION VESPERTINA</div>
+                    <div class="text-wrapper-16">200kcal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-3">
+                <div class="overlap-wrapper">
+                  <div class="div-3">
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-12.svg" />
+                        <img class="line-2" src="img/line-5-7.svg" />
+                      </div>
+                    </div>
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-8.svg" />
+                        <img class="line-2" src="img/line-5.svg" />
+                      </div>
+                    </div>
+                    <img class="line-4" src="img/line-2-6.svg" />
+                    <img class="line-5" src="img/line-3-6.svg" />
+                    <img class="line-6" src="img/line-5-18.svg" />
+                    <div class="text-wrapper-13">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-5"></div>
+                    <div class="rectangle-6"></div>
+                    <div class="text-wrapper-17">INGREDIENTES</div>
+                    <img class="line-8" src="img/line-4-16.svg" />
+                    <div class="text-wrapper-18">PREPARACION</div>
+                    <div class="text-wrapper-16">200kcal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="huevos-con-nopales">
+                <div class="overlap-wrapper">
+                  <div class="div-3">
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-7.svg" />
+                        <img class="line-2" src="img/line-5-17.svg" />
+                      </div>
+                    </div>
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/image.svg" />
+                        <img class="line-2" src="img/line-5-8.svg" />
+                      </div>
+                    </div>
+                    <img class="line-4" src="img/line-2-4.svg" />
+                    <img class="line-5" src="img/line-3-2.svg" />
+                    <img class="line-6" src="img/line-5-10.svg" />
+                    <div class="text-wrapper-13">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-5"></div>
+                    <div class="rectangle-6"></div>
+                    <div class="text-wrapper-17">INGREDIENTES</div>
+                    <img class="line-8" src="img/line-4-4.svg" />
+                    <div class="text-wrapper-18">PREPARACION</div>
+                    <div class="text-wrapper-16">200kcal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-2">
+              <div class="overlap-3">
+                <p class="p">COLACIONES 100 A 200 kcal.</p>
+                <img class="line-9" src="img/line-1-2.svg" />
+              </div>
+            </div>
+            <div class="frame-4">
+              <div class="div-3">
+                <div class="overlap-wrapper">
+                  <div class="div-3">
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-14.svg" />
+                        <img class="line-2" src="img/line-5-6.svg" />
+                      </div>
+                    </div>
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-3.svg" />
+                        <img class="line-2" src="img/line-5-9.svg" />
+                      </div>
+                    </div>
+                    <img class="line-4" src="img/line-2-2.svg" />
+                    <img class="line-5" src="img/line-3-3.svg" />
+                    <img class="line-6" src="img/line-5-15.svg" />
+                    <div class="text-wrapper-13">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-5"></div>
+                    <div class="rectangle-6"></div>
+                    <div class="text-wrapper-17">INGREDIENTES</div>
+                    <img class="line-8" src="img/line-4-15.svg" />
+                    <div class="text-wrapper-18">PREPARACION</div>
+                    <div class="text-wrapper-16">200kcal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-3">
+                <div class="overlap-wrapper">
+                  <div class="div-3">
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-11.svg" />
+                        <img class="line-2" src="img/line-5-2.svg" />
+                      </div>
+                    </div>
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-6.svg" />
+                        <img class="line-2" src="img/line-5-4.svg" />
+                      </div>
+                    </div>
+                    <img class="line-4" src="img/line-2.svg" />
+                    <img class="line-5" src="img/line-3-5.svg" />
+                    <img class="line-6" src="img/line-5-13.svg" />
+                    <div class="text-wrapper-13">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-5"></div>
+                    <div class="rectangle-6"></div>
+                    <div class="text-wrapper-17">INGREDIENTES</div>
+                    <img class="line-8" src="img/line-4-10.svg" />
+                    <div class="text-wrapper-18">PREPARACION</div>
+                    <div class="text-wrapper-16">200kcal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="huevos-con-nopales">
+                <div class="overlap-wrapper">
+                  <div class="div-3">
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-13.svg" />
+                        <img class="line-2" src="img/line-5-14.svg" />
+                      </div>
+                    </div>
+                    <div class="div-wrapper">
+                      <div class="overlap-2">
+                        <div class="carta-de">
+                          <div class="overlap-group-3">
+                            <div class="rectangle-2"></div>
+                            <p class="text-wrapper-6">
+                              Sirva y acompañe con la tortilla. Puede agregar un poco de salsa.
+                            </p>
+                            <p class="text-wrapper-7">Mezcle con el nopal y sazone con un poco de sal.</p>
+                            <div class="text-wrapper-8">1 Tortilla de maíz</div>
+                            <p class="text-wrapper-9">1 Cucharada de aceite de maíz</p>
+                            <div class="text-wrapper-10">1 Huevo</div>
+                            <p class="text-wrapper-11">1/2 Taza de nopales cocidos y picados</p>
+                            <p class="text-wrapper-12">
+                              En un sartén caliente el aceite. Mezcle el huevo y agregue al sartén.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="img" src="img/line-4-17.svg" />
+                        <img class="line-2" src="img/line-5-12.svg" />
+                      </div>
+                    </div>
+                    <img class="line-4" src="img/line-2-5.svg" />
+                    <img class="line-5" src="img/line-3-4.svg" />
+                    <img class="line-6" src="img/line-5-11.svg" />
+                    <div class="text-wrapper-13">HUEVOS CON NOPALES</div>
+                    <div class="rectangle-5"></div>
+                    <div class="rectangle-6"></div>
+                    <div class="text-wrapper-17">INGREDIENTES</div>
+                    <img class="line-8" src="img/line-4.svg" />
+                    <div class="text-wrapper-18">PREPARACION</div>
+                    <div class="text-wrapper-16">200kcal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group-3"><div class="text-wrapper-19">COLACIONES</div></div>
+        <div class="BOTON-CATEGORIA">
+          <div class="overlap-4">
+            <div class="text-wrapper-20">CATEGORIAS</div>
+          </div>
+        </div>
+      </div>
+      <div class="FOOTER-wrapper">
+          <footer class="FOOTER">
+            <div class="inicio-sobre">
+              Inicio<br /><br />Sobre nosotros<br /><br />Servicios<br /><br />Blog o artículos<br /><br />Contacto
+            </div>
+            <p class="text-wrapper-46">© 2025 SmartBites. Todos los derechos reservados.</p>
+          </footer>
+      </div>
+    </div>
+      <script>
+    function toggleDropdown(event) {
+  event.preventDefault();
+  var content = document.getElementById("dropdownContent");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  var submenu = document.getElementById("submenuContent");
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+
+// Cierra los menús si se hace clic fuera
+document.addEventListener("click", function(e) {
+  const dropdown = document.getElementById("dropdownContent");
+  const submenu = document.getElementById("submenuContent");
+  // Si el clic NO fue dentro de .dropdown ni .submenu-content
+  if (!e.target.closest('.dropdown')) {
+    if (dropdown) dropdown.style.display = "none";
+    if (submenu) submenu.style.display = "none";
+  }
+});
+</script>
+  </body>
+</html>

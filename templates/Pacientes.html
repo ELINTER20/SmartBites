@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>SMARTBITES</title>
+    <link rel="stylesheet" href="../static/stylesPacientes.css" />
+  </head>
+ 
+  <body data color-mode="SDS-light">
+    <div class="principal">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo">
+            <img src="../static/img/HojaSin 2.png" alt="logo sin fondo" class="logo-img" />
+            <h1 class="logo-text">SmartBites</h1>
+          </div>
+          <form class="search-form" role="search">
+            <img src="../static/img/search.png" alt="Buscar" class="search-icon" />
+            <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            <button class="search-button" type="submit">
+            </button>
+          </form>
+          <a href="{{ url_for('login') }}" class="user-icon" aria-label="Perfil de usuario">
+            <img src="../static/img/user.png" alt="Icono de usuario" class="icon-user" />
+          </a>
+        </nav>
+      </header>
+      <main>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Pacientes</title>
+</head>
+<body>
+
+  <div class="pacientes-container">
+    <h2>Pacientes Lista</h2>
+
+    <!-- Paciente 1 -->
+    <div class="paciente">
+      <div class="foto-nombre">
+        <img src="../static/img2/daniel.jpg" alt="Foto del paciente" class="foto-paciente" />
+        <span class="nombre">Diego Daniel Facundo</span>
+      </div>
+
+      <div class="botones">
+        <a href="" class="boton">Chat</a>
+        <a href="" class="boton">Información de paciente</a>
+      </div>
+    </div>
+
+    <div class="paciente">
+      <div class="foto-nombre">
+        <img src="../static/img2/kiki.jpg" alt="Foto del paciente" class="foto-paciente" />
+        <span class="nombre">Enrique jahir</span>
+      </div>
+      <div class="botones">
+        <a href="" class="boton">Chat</a>
+        <a href="" class="boton">Información de paciente</a>
+      </div>
+    </div>
+
+    <div class="paciente">
+      <div class="foto-nombre">
+        <img src="../static/img2/naty.jpg" alt="Foto del paciente" class="foto-paciente" />
+        <span class="nombre">Natalia Analis</span>
+      </div>
+      <div class="botones">
+        <a href="" class="boton">Chat</a>
+        <a href="" class="boton">Información de paciente</a>
+      </div>
+    </div>
+
+    <!-- Puedes duplicar este bloque para más pacientes -->
+
+  </div>
+
+</body>
+</html>
